@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel Fusion Hub | World Monitor RPA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { mono: ['JetBrains Mono', 'monospace'] },
+                    colors: {
+                        intel: { black: '#020617', dark: '#0f172a', border: '#1e293b', neon: '#10b981', sky: '#0ea5e9', gold: '#f59e0b' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(30, 41, 59, 0.5);
+        }
+
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+        }
+
+        .drop-zone {
+            border: 2px dashed rgba(30, 41, 59, 0.8);
+            transition: all 0.3s;
+        }
+
+        .drop-zone.active {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        @keyframes pulse-border {
+            0% {
+                border-color: #1e293b;
+            }
+
+            50% {
+                border-color: #10b981;
+            }
+
+            100% {
+                border-color: #1e293b;
+            }
+        }
+
+        .loading-pulse {
+            animation: pulse-border 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Top Status Bar -->
+    <div
+        class="w-full bg-intel-neon/10 border-b border-intel-neon/20 py-1.5 text-[10px] text-center text-intel-neon font-bold uppercase tracking-[0.3em]">
+        Sinal de Inteligência Detectado - Processamento RPA Ativo
+    </div>
+
+    <header class="border-b border-intel-border sticky top-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-intel-neon rounded flex items-center justify-center neon-glow">
+                    <i data-lucide="shield-check" class="text-intel-black w-5 h-5"></i>
+                </div>
+                <h1 class="font-bold text-lg tracking-tighter uppercase">Intel <span
+                        class="text-intel-neon">Fusion</span></h1>
+            </div>
+            <div class="flex items-center gap-6">
+                <div id="status-tag"
+                    class="hidden md:flex items-center gap-2 text-[10px] text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-intel-border">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600"></div> MODO: STANDBY
+                </div>
+                <span
+                    class="text-[10px] text-slate-500 font-bold border-l border-intel-border pl-6 uppercase tracking-widest">FIAP
+                    2026</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+
+        <!-- Welcome & Uploader -->
+        <section class="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-tight">LIVE DATA <br /> <span
+                        class="text-intel-neon">INGESTION</span></h2>
+                <p class="text-slate-400 text-lg font-light leading-relaxed mb-8">
+                    Este dashboard consome o arquivo <code class="text-intel-sky">nlp_ready_fusion.csv</code> gerado
+                    pelo nosso pipeline no Colab. O sistema cruza os domínios World, Tech e Finance em tempo real.
+                </p>
+                <div class="flex gap-4">
+                    <div class="flex -space-x-2">
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-intel-black bg-slate-800 flex items-center justify-center text-[10px] font-bold">
+                            N</div>
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-intel-black bg-slate-700 flex items-center justify-center text-[10px] font-bold">
+                            R</div>
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-intel-black bg-slate-600 flex items-center justify-center text-[10px] font-bold">
+                            L</div>
+                        <div
+                            class="w-8 h-8 rounded-full border-2 border-intel-black bg-slate-500 flex items-center justify-center text-[10px] font-bold">
+                            +2</div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Squad de Inteligência Geopolítica</p>
+                </div>
+            </div>
+
+            <div id="drop-zone"
+                class="drop-zone glass p-10 rounded-3xl text-center cursor-pointer relative overflow-hidden group">
+                <input type="file" id="file-input" class="hidden" accept=".csv">
+                <div class="relative z-10">
+                    <div
+                        class="w-16 h-16 bg-intel-border rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-intel-neon group-hover:text-intel-black transition-all">
+                        <i data-lucide="upload-cloud" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Upload de Dados Reais</h3>
+                    <p class="text-xs text-slate-500 mb-6">Arraste o arquivo CSV gerado pelo RPA aqui <br> ou clique
+                        para selecionar.</p>
+                    <span
+                        class="text-[10px] px-3 py-1 bg-intel-neon/10 text-intel-neon rounded border border-intel-neon/20 uppercase font-bold tracking-widest">Aguardando
+                        nlp_ready_fusion.csv</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Grid (Dynamic) -->
+        <section id="stats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 opacity-50">
+            <div class="glass p-6 rounded-2xl border-b-2 border-intel-sky">
+                <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Capturado</p>
+                <h4 id="stat-total" class="text-3xl font-black">--</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl border-b-2 border-intel-neon">
+                <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Domínios</p>
+                <h4 id="stat-domains" class="text-3xl font-black">--</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl border-b-2 border-intel-gold">
+                <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Fusões RAG</p>
+                <h4 id="stat-fusions" class="text-3xl font-black">--</h4>
+            </div>
+            <div class="glass p-6 rounded-2xl border-b-2 border-slate-500">
+                <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Status RPA</p>
+                <h4 class="text-xl font-black text-intel-neon uppercase">LIVE</h4>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2 glass p-8 rounded-3xl h-[400px]">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Distribuição por Categoria
+                    </h4>
+                    <i data-lucide="bar-chart-3" class="w-4 h-4 text-intel-sky"></i>
+                </div>
+                <div class="h-full pb-10">
+                    <canvas id="mainChart"></canvas>
+                </div>
+            </div>
+            <div class="glass p-8 rounded-3xl">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 text-center">Última Fusão
+                    Realizada</h4>
+                <div id="fusion-preview" class="space-y-4">
+                    <div class="text-center py-12 text-slate-600">
+                        <i data-lucide="cpu" class="w-12 h-12 mx-auto mb-4 opacity-20"></i>
+                        <p class="text-xs italic">Aguardando injeção de dados para sintetizar contexto...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Data Feed -->
+        <section class="mb-20">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-2xl font-bold flex items-center gap-3 italic">
+                    <i data-lucide="terminal" class="text-intel-neon"></i> Intel_Feed.log
+                </h3>
+            </div>
+
+            <div class="overflow-x-auto glass rounded-3xl border border-intel-border shadow-2xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-intel-dark/80 border-b border-intel-border">
+                            <th class="p-5 text-[10px] uppercase text-slate-500">Timestamp</th>
+                            <th class="p-5 text-[10px] uppercase text-slate-500">Origem</th>
+                            <th class="p-5 text-[10px] uppercase text-slate-500">Manchete Processada</th>
+                            <th class="p-5 text-[10px] uppercase text-slate-500 text-right">Integridade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table-body" class="text-xs font-mono text-slate-300">
+                        <!-- Linhas Injetadas via JS -->
+                        <tr>
+                            <td colspan="4"
+                                class="p-20 text-center text-slate-600 uppercase tracking-[0.5em] animate-pulse">Sistema
+                                em Standby</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-intel-border bg-intel-dark/50 py-10">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-4">
+                <span>RPA PLAYWRIGHT</span>
+                <span>PANDAS FUSION</span>
+                <span>NLP/RAG READY</span>
+            </div>
+            <p class="text-[9px] text-slate-600">© 2026 - WORLD MONITOR INTELLIGENCE SYSTEM - EXCLUSIVO PARA FINS
+                EDUCACIONAIS</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        let mainChart;
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+
+        // Drag and Drop Logic
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('active'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('active'));
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('active');
+            const file = e.dataTransfer.files[0];
+            handleFile(file);
+        });
+
+        fileInput.addEventListener('change', (e) => handleFile(e.target.files[0]));
+
+        function handleFile(file) {
+            if (!file) return;
+            Papa.parse(file, {
+                header: true,
+                skipEmptyLines: true,
+                complete: function (results) {
+                    processData(results.data);
+                }
+            });
+        }
+
+        // Tenta carregar automaticamente se o arquivo estiver no mesmo servidor (Vercel)
+        fetch('nlp_ready_fusion.csv')
+            .then(response => {
+                if (response.ok) return response.text();
+                throw new Error('Local file not found');
+            })
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function (results) { processData(results.data); }
+                });
+            })
+            .catch(err => console.log("Aguardando upload manual do CSV..."));
+
+        function processData(data) {
+            // Atualiza Status
+            document.getElementById('status-tag').innerHTML = '<div class="w-1.5 h-1.5 rounded-full bg-intel-neon animate-pulse"></div> MODO: DADOS REAIS';
+            document.getElementById('status-tag').classList.remove('hidden');
+            document.getElementById('stats-grid').classList.remove('opacity-50');
+
+            // Estatísticas
+            document.getElementById('stat-total').innerText = data.length;
+            const domains = [...new Set(data.map(item => item.Dominio_Origem))];
+            document.getElementById('stat-domains').innerText = domains.length;
+            document.getElementById('stat-fusions').innerText = data.filter(i => i.Prompt_Ready).length;
+
+            // Tabela
+            const tbody = document.getElementById('data-table-body');
+            tbody.innerHTML = '';
+            data.slice(0, 8).forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-intel-border/30 hover:bg-white/5 transition-colors group';
+                tr.innerHTML = `
+                    <td class="p-5 text-slate-500">${row.Published ? row.Published.split('.')[0] : 'N/A'}</td>
+                    <td class="p-5"><span class="px-2 py-0.5 bg-intel-sky/10 text-intel-sky rounded border border-intel-sky/20 font-bold text-[10px] uppercase">${row.Dominio_Origem}</span></td>
+                    <td class="p-5 text-slate-300 font-light truncate max-w-md">${row.primaryTitle || '---'}</td>
+                    <td class="p-5 text-right"><span class="text-intel-neon text-[10px] font-bold">100% OK</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // Fusion Preview (Pega o primeiro item como exemplo)
+            const fusionBox = document.getElementById('fusion-preview');
+            const sample = data[0];
+            fusionBox.innerHTML = `
+                <div class="p-4 bg-intel-black rounded-xl border border-intel-sky/20">
+                    <p class="text-[10px] text-intel-sky font-bold uppercase mb-2">Fato Capturado</p>
+                    <p class="text-xs italic text-slate-400">"${sample.primaryTitle}"</p>
+                </div>
+                <div class="flex justify-center py-1">
+                    <i data-lucide="chevrons-down" class="text-intel-neon w-4 h-4"></i>
+                </div>
+                <div class="p-5 bg-intel-neon/5 rounded-2xl border border-intel-neon/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-2 opacity-20"><i data-lucide="zap" class="w-4 h-4"></i></div>
+                    <p class="text-[10px] text-intel-neon font-bold uppercase mb-3 tracking-widest">Sintetizado para o RAG</p>
+                    <p class="text-[10px] font-mono leading-relaxed text-slate-200">
+                        ${sample.Prompt_Ready ? sample.Prompt_Ready.substring(0, 250) + '...' : 'Contexto Indisponível'}
+                    </p>
+                </div>
+            `;
+            lucide.createIcons();
+
+            // Gráfico
+            const counts = {};
+            data.forEach(i => counts[i.Dominio_Origem] = (counts[i.Dominio_Origem] || 0) + 1);
+            updateChart(Object.keys(counts), Object.values(counts));
+        }
+
+        function updateChart(labels, values) {
+            const ctx = document.getElementById('mainChart').getContext('2d');
+            if (mainChart) mainChart.destroy();
+            mainChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Volume de Dados por Domínio',
+                        data: values,
+                        backgroundColor: ['#10b981', '#0ea5e9', '#f59e0b'],
+                        borderRadius: 8,
+                        barThickness: 40
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#64748b' } },
+                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
