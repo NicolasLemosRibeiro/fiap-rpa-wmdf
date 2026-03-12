@@ -73,6 +73,22 @@
         .loading-pulse {
             animation: pulse-border 2s infinite;
         }
+
+        /* Custom Scrollbar for Intel Feed */
+        .intel-scroll::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .intel-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .intel-scroll::-webkit-scrollbar-thumb {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 10px;
+        }
+        .intel-scroll::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
     </style>
 </head>
 
@@ -175,23 +191,35 @@
 
         <!-- Analytics Section -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <div class="lg:col-span-2 glass p-8 rounded-3xl h-[400px]">
+            <!-- Domínios -->
+            <div class="glass p-8 rounded-3xl h-[400px]">
                 <div class="flex justify-between items-center mb-6">
-                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Distribuição por Categoria
-                    </h4>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Distribuição (Domínios)</h4>
                     <i data-lucide="bar-chart-3" class="w-4 h-4 text-intel-sky"></i>
                 </div>
                 <div class="h-full pb-10">
                     <canvas id="mainChart"></canvas>
                 </div>
             </div>
+
+            <!-- Top Fontes -->
+            <div class="glass p-8 rounded-3xl h-[400px]">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Top 5 Fontes</h4>
+                    <i data-lucide="pie-chart" class="w-4 h-4 text-intel-neon"></i>
+                </div>
+                <div class="h-full pb-10">
+                    <canvas id="sourceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Fusion Preview -->
             <div class="glass p-8 rounded-3xl">
-                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 text-center">Última Fusão
-                    Realizada</h4>
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8 text-center">Última Fusão RAG</h4>
                 <div id="fusion-preview" class="space-y-4">
                     <div class="text-center py-12 text-slate-600">
                         <i data-lucide="cpu" class="w-12 h-12 mx-auto mb-4 opacity-20"></i>
-                        <p class="text-xs italic">Aguardando injeção de dados para sintetizar contexto...</p>
+                        <p class="text-xs italic">Aguardando injeção de dados...</p>
                     </div>
                 </div>
             </div>
@@ -199,22 +227,29 @@
 
         <!-- Dynamic Data Feed -->
         <section class="mb-20">
-            <div class="flex items-center justify-between mb-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
                 <h3 class="text-2xl font-bold flex items-center gap-3 italic">
                     <i data-lucide="terminal" class="text-intel-neon"></i> Intel_Feed.log
                 </h3>
+                <div class="relative w-full md:w-96">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar por título ou fonte..." class="w-full bg-slate-900 border border-intel-border rounded-full py-2 pl-10 pr-4 text-sm font-mono text-slate-300 focus:outline-none focus:border-intel-sky focus:ring-1 focus:ring-intel-sky transition-all placeholder:text-slate-600 disabled:opacity-50" disabled>
+                </div>
             </div>
 
-            <div class="overflow-x-auto glass rounded-3xl border border-intel-border shadow-2xl">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-intel-dark/80 border-b border-intel-border">
-                            <th class="p-5 text-[10px] uppercase text-slate-500">Timestamp</th>
-                            <th class="p-5 text-[10px] uppercase text-slate-500">Origem</th>
-                            <th class="p-5 text-[10px] uppercase text-slate-500">Manchete Processada</th>
-                            <th class="p-5 text-[10px] uppercase text-slate-500 text-right">Integridade</th>
-                        </tr>
-                    </thead>
+            <div class="glass rounded-3xl border border-intel-border shadow-2xl relative">
+                <div class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-intel-dark/80 to-transparent z-10 pointer-events-none rounded-t-3xl border-b border-intel-border"></div>
+                <!-- Scrollable Container for table -->
+                <div class="overflow-x-auto overflow-y-auto max-h-[600px] rounded-3xl intel-scroll">
+                    <table class="w-full text-left border-collapse relative">
+                        <thead class="sticky top-0 z-20 backdrop-blur-md bg-intel-dark/95 border-b border-intel-border/50">
+                            <tr>
+                                <th class="p-5 text-[10px] uppercase text-slate-500 whitespace-nowrap">Timestamp</th>
+                                <th class="p-5 text-[10px] uppercase text-slate-500 whitespace-nowrap">Origem</th>
+                                <th class="p-5 text-[10px] uppercase text-slate-500 w-full">Manchete Processada</th>
+                                <th class="p-5 text-[10px] uppercase text-slate-500 text-right whitespace-nowrap">Integridade</th>
+                            </tr>
+                        </thead>
                     <tbody id="data-table-body" class="text-xs font-mono text-slate-300">
                         <!-- Linhas Injetadas via JS -->
                         <tr>
@@ -245,8 +280,22 @@
         lucide.createIcons();
 
         let mainChart;
+        let sourceChart;
+        let globalData = [];
         const dropZone = document.getElementById('drop-zone');
         const fileInput = document.getElementById('file-input');
+        const searchInput = document.getElementById('searchInput');
+
+        // Search logic
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = globalData.filter(row => {
+                const title = (row.primaryTitle || row.Title || row.title || '').toLowerCase();
+                const source = (row.primarySource || row.Source || row.source || '').toLowerCase();
+                return title.includes(term) || source.includes(term);
+            });
+            renderTable(filtered);
+        });
 
         // Drag and Drop Logic
         dropZone.addEventListener('click', () => fileInput.click());
@@ -288,6 +337,12 @@
             .catch(err => console.log("Aguardando upload manual do CSV..."));
 
         function processData(data) {
+            globalData = data;
+            
+            // Ativar busca
+            searchInput.disabled = false;
+            searchInput.placeholder = `Buscar num. de ${data.length} registros...`;
+
             // Atualiza Status
             document.getElementById('status-tag').innerHTML = '<div class="w-1.5 h-1.5 rounded-full bg-intel-neon animate-pulse"></div> MODO: DADOS REAIS';
             document.getElementById('status-tag').classList.remove('hidden');
@@ -299,28 +354,17 @@
             document.getElementById('stat-domains').innerText = domains.length;
             document.getElementById('stat-fusions').innerText = data.filter(i => i.Prompt_Ready).length;
 
-            // Tabela
-            const tbody = document.getElementById('data-table-body');
-            tbody.innerHTML = '';
-            data.slice(0, 8).forEach(row => {
-                const tr = document.createElement('tr');
-                tr.className = 'border-b border-intel-border/30 hover:bg-white/5 transition-colors group';
-                tr.innerHTML = `
-                    <td class="p-5 text-slate-500">${row.Published ? row.Published.split('.')[0] : 'N/A'}</td>
-                    <td class="p-5"><span class="px-2 py-0.5 bg-intel-sky/10 text-intel-sky rounded border border-intel-sky/20 font-bold text-[10px] uppercase">${row.Dominio_Origem}</span></td>
-                    <td class="p-5 text-slate-300 font-light truncate max-w-md">${row.primaryTitle || '---'}</td>
-                    <td class="p-5 text-right"><span class="text-intel-neon text-[10px] font-bold">100% OK</span></td>
-                `;
-                tbody.appendChild(tr);
-            });
+            // Renderiza Tabela Dinâmica Completa
+            renderTable(data);
 
-            // Fusion Preview (Pega o primeiro item como exemplo)
+            // Fusion Preview 
             const fusionBox = document.getElementById('fusion-preview');
-            const sample = data[0];
+            const sample = data.find(i => i.Prompt_Ready) || data[0];
+            const sampleTitle = sample.primaryTitle || sample.Title || sample.title || 'Sem Título';
             fusionBox.innerHTML = `
                 <div class="p-4 bg-intel-black rounded-xl border border-intel-sky/20">
                     <p class="text-[10px] text-intel-sky font-bold uppercase mb-2">Fato Capturado</p>
-                    <p class="text-xs italic text-slate-400">"${sample.primaryTitle}"</p>
+                    <p class="text-xs italic text-slate-400 max-h-16 overflow-hidden text-ellipsis line-clamp-3">"${sampleTitle}"</p>
                 </div>
                 <div class="flex justify-center py-1">
                     <i data-lucide="chevrons-down" class="text-intel-neon w-4 h-4"></i>
@@ -329,16 +373,58 @@
                     <div class="absolute top-0 right-0 p-2 opacity-20"><i data-lucide="zap" class="w-4 h-4"></i></div>
                     <p class="text-[10px] text-intel-neon font-bold uppercase mb-3 tracking-widest">Sintetizado para o RAG</p>
                     <p class="text-[10px] font-mono leading-relaxed text-slate-200">
-                        ${sample.Prompt_Ready ? sample.Prompt_Ready.substring(0, 250) + '...' : 'Contexto Indisponível'}
+                        ${sample.Prompt_Ready ? sample.Prompt_Ready.substring(0, 200) + '...' : 'Contexto Indisponível'}
                     </p>
                 </div>
             `;
             lucide.createIcons();
 
-            // Gráfico
+            // Gráfico 1: Domínios
             const counts = {};
             data.forEach(i => counts[i.Dominio_Origem] = (counts[i.Dominio_Origem] || 0) + 1);
             updateChart(Object.keys(counts), Object.values(counts));
+
+            // Gráfico 2: Fontes
+            const sourceCounts = {};
+            data.forEach(i => {
+                const src = i.primarySource || i.Source || i.source || 'N/A';
+                sourceCounts[src] = (sourceCounts[src] || 0) + 1;
+            });
+            const sortedSources = Object.entries(sourceCounts).sort((a,b) => b[1] - a[1]).slice(0, 5);
+            updateSourceChart(sortedSources.map(s => s[0]), sortedSources.map(s => s[1]));
+        }
+
+        function renderTable(dataset) {
+            const tbody = document.getElementById('data-table-body');
+            tbody.innerHTML = '';
+            
+            if (dataset.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="p-10 text-center text-slate-500">Nenhum registro encontrado na busca.</td></tr>`;
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            dataset.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b border-intel-border/30 hover:bg-white/5 transition-colors group';
+                
+                const title = row.primaryTitle || row.Title || row.title || '---';
+                const source = row.primarySource || row.Source || row.source || '---';
+                const dateRaw = row.Published || row.pubDate || row.lastUpdated || '';
+                const dateFmt = dateRaw ? dateRaw.split(' ')[0].split('T')[0] : 'N/A'; 
+
+                tr.innerHTML = `
+                    <td class="p-4 text-slate-500 whitespace-nowrap">${dateFmt}</td>
+                    <td class="p-4 whitespace-nowrap">
+                        <span class="px-2 py-0.5 bg-intel-sky/10 text-intel-sky rounded border border-intel-sky/20 font-bold text-[9px] uppercase">${row.Dominio_Origem || 'N/A'}</span>
+                        <span class="ml-1 px-2 py-0.5 ${source !== 'N/A' && source !== '---' ? 'bg-slate-800 text-slate-300 border-slate-700' : 'bg-transparent text-slate-600 border-transparent'} rounded border font-bold text-[9px] uppercase max-w-[100px] truncate inline-block align-bottom">${source}</span>
+                    </td>
+                    <td class="p-4 text-slate-300 font-light truncate max-w-[200px] sm:max-w-md lg:max-w-xl" title="${title}">${title}</td>
+                    <td class="p-4 text-right"><span class="text-intel-neon text-[10px] font-bold">100% OK</span></td>
+                `;
+                fragment.appendChild(tr);
+            });
+            tbody.appendChild(fragment);
         }
 
         function updateChart(labels, values) {
@@ -351,9 +437,10 @@
                     datasets: [{
                         label: 'Volume de Dados por Domínio',
                         data: values,
-                        backgroundColor: ['#10b981', '#0ea5e9', '#f59e0b'],
-                        borderRadius: 8,
-                        barThickness: 40
+                        backgroundColor: ['#10b981', '#0ea5e9', '#f59e0b', '#8b5cf6', '#ef4444'],
+                        borderRadius: 6,
+                        barThickness: 'flex',
+                        maxBarThickness: 40
                     }]
                 },
                 options: {
@@ -362,7 +449,35 @@
                     plugins: { legend: { display: false } },
                     scales: {
                         y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#64748b' } },
-                        x: { grid: { display: false }, ticks: { color: '#64748b' } }
+                        x: { grid: { display: false }, ticks: { color: '#64748b', maxRotation: 45, minRotation: 0 } }
+                    }
+                }
+            });
+        }
+
+        function updateSourceChart(labels, values) {
+            const ctx = document.getElementById('sourceChart').getContext('2d');
+            if (sourceChart) sourceChart.destroy();
+            sourceChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: values,
+                        backgroundColor: ['#0ea5e9', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'],
+                        borderWidth: 0,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: { 
+                        legend: { 
+                            position: 'right',
+                            labels: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 10 } }
+                        } 
                     }
                 }
             });
