@@ -1,0 +1,2542 @@
+{
+  "news": [
+    {
+      "id": "1773286186099-AuthorCorrectionG",
+      "primaryTitle": "Author Correction: Gut stem cell necroptosis by genome instability triggers bowel inflammation",
+      "primarySource": "Nature News",
+      "primaryLink": "https://www.nature.com/articles/s41586-026-10302-3",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Nature News",
+          "tier": 4,
+          "url": "https://www.nature.com/articles/s41586-026-10302-3"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Nature News",
+          "title": "Author Correction: Gut stem cell necroptosis by genome instability triggers bowel inflammation",
+          "link": "https://www.nature.com/articles/s41586-026-10302-3",
+          "pubDate": "2026-03-12T03:29:46.099Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-12T03:29:46.099Z",
+      "lastUpdated": "2026-03-12T03:29:46.099Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773286186099-Thissupernovaisto",
+      "primaryTitle": "This supernova is too bright – now astronomers might know why",
+      "primarySource": "Nature News",
+      "primaryLink": "https://www.nature.com/articles/d41586-026-00801-8",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Nature News",
+          "tier": 4,
+          "url": "https://www.nature.com/articles/d41586-026-00801-8"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Nature News",
+          "title": "This supernova is too bright – now astronomers might know why",
+          "link": "https://www.nature.com/articles/d41586-026-00801-8",
+          "pubDate": "2026-03-12T03:29:46.099Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-12T03:29:46.099Z",
+      "lastUpdated": "2026-03-12T03:29:46.099Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773286186099-Thisfishshouldnt",
+      "primaryTitle": "This fish shouldn’t exist — the weird genetics of clonal vertebrates",
+      "primarySource": "Nature News",
+      "primaryLink": "https://www.nature.com/articles/d41586-026-00798-0",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Nature News",
+          "tier": 4,
+          "url": "https://www.nature.com/articles/d41586-026-00798-0"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Nature News",
+          "title": "This fish shouldn’t exist — the weird genetics of clonal vertebrates",
+          "link": "https://www.nature.com/articles/d41586-026-00798-0",
+          "pubDate": "2026-03-12T03:29:46.099Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-12T03:29:46.099Z",
+      "lastUpdated": "2026-03-12T03:29:46.099Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773286186099-Thedynamicbasisof",
+      "primaryTitle": "The dynamic basis of G-protein recognition and activation by a GPCR",
+      "primarySource": "Nature News",
+      "primaryLink": "https://www.nature.com/articles/s41586-026-10228-w",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Nature News",
+          "tier": 4,
+          "url": "https://www.nature.com/articles/s41586-026-10228-w"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Nature News",
+          "title": "The dynamic basis of G-protein recognition and activation by a GPCR",
+          "link": "https://www.nature.com/articles/s41586-026-10228-w",
+          "pubDate": "2026-03-12T03:29:46.099Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-12T03:29:46.099Z",
+      "lastUpdated": "2026-03-12T03:29:46.099Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773286186099-Alargescalecohere",
+      "primaryTitle": "A large-scale coherent 4D imaging sensor",
+      "primarySource": "Nature News",
+      "primaryLink": "https://www.nature.com/articles/s41586-026-10183-6",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Nature News",
+          "tier": 4,
+          "url": "https://www.nature.com/articles/s41586-026-10183-6"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Nature News",
+          "title": "A large-scale coherent 4D imaging sensor",
+          "link": "https://www.nature.com/articles/s41586-026-10183-6",
+          "pubDate": "2026-03-12T03:29:46.099Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-12T03:29:46.099Z",
+      "lastUpdated": "2026-03-12T03:29:46.099Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773266518000-Wedonothavetime",
+      "primaryTitle": "‘We do not have time’: Interview with MEP Delara Burkhardt on the EUDR’s second delay",
+      "primarySource": "Mongabay",
+      "primaryLink": "https://news.mongabay.com/2026/03/we-do-not-have-time-interview-with-mep-delara-burkhardt-on-the-eudrs-second-delay/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Mongabay",
+          "tier": 3,
+          "url": "https://news.mongabay.com/2026/03/we-do-not-have-time-interview-with-mep-delara-burkhardt-on-the-eudrs-second-delay/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Mongabay",
+          "title": "‘We do not have time’: Interview with MEP Delara Burkhardt on the EUDR’s second delay",
+          "link": "https://news.mongabay.com/2026/03/we-do-not-have-time-interview-with-mep-delara-burkhardt-on-the-eudrs-second-delay/",
+          "pubDate": "2026-03-11T22:01:58.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "diplomatic",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-11T22:01:58.000Z",
+      "lastUpdated": "2026-03-11T22:01:58.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "diplomatic",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773266002000-Rightsviolationspr",
+      "primaryTitle": "Rights violations prompt world’s largest sovereign wealth fund to divest from Bolloré",
+      "primarySource": "Mongabay",
+      "primaryLink": "https://news.mongabay.com/short-article/2026/03/rights-violations-prompt-worlds-largest-sovereign-wealth-fund-to-divest-from-bollore/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Mongabay",
+          "tier": 3,
+          "url": "https://news.mongabay.com/short-article/2026/03/rights-violations-prompt-worlds-largest-sovereign-wealth-fund-to-divest-from-bollore/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Mongabay",
+          "title": "Rights violations prompt world’s largest sovereign wealth fund to divest from Bolloré",
+          "link": "https://news.mongabay.com/short-article/2026/03/rights-violations-prompt-worlds-largest-sovereign-wealth-fund-to-divest-from-bollore/",
+          "pubDate": "2026-03-11T21:53:22.000Z",
+          "isAlert": true,
+          "threat": {
+            "level": "high",
+            "category": "conflict",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-11T21:53:22.000Z",
+      "lastUpdated": "2026-03-11T21:53:22.000Z",
+      "isAlert": true,
+      "threat": {
+        "level": "high",
+        "category": "conflict",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773263620000-GrowingnumberofIn",
+      "primaryTitle": "Growing number of Indigenous Twa forced out of DRC’s forests and into towns",
+      "primarySource": "Mongabay",
+      "primaryLink": "https://news.mongabay.com/2026/03/growing-number-of-indigenous-twa-forced-out-of-drcs-forests-and-into-towns/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Mongabay",
+          "tier": 3,
+          "url": "https://news.mongabay.com/2026/03/growing-number-of-indigenous-twa-forced-out-of-drcs-forests-and-into-towns/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Mongabay",
+          "title": "Growing number of Indigenous Twa forced out of DRC’s forests and into towns",
+          "link": "https://news.mongabay.com/2026/03/growing-number-of-indigenous-twa-forced-out-of-drcs-forests-and-into-towns/",
+          "pubDate": "2026-03-11T21:13:40.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "conflict",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "nature-wildlife",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-11T21:13:40.000Z",
+      "lastUpdated": "2026-03-11T21:13:40.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "conflict",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773261956000-Belugasfacingeutha",
+      "primaryTitle": "Belugas facing euthanasia at shuttered Canada theme park may find new homes in US",
+      "primarySource": "Mongabay",
+      "primaryLink": "https://news.mongabay.com/2026/03/belugas-facing-euthanasia-at-shuttered-canada-theme-park-may-find-new-homes-in-us/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Mongabay",
+          "tier": 3,
+          "url": "https://news.mongabay.com/2026/03/belugas-facing-euthanasia-at-shuttered-canada-theme-park-may-find-new-homes-in-us/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Mongabay",
+          "title": "Belugas facing euthanasia at shuttered Canada theme park may find new homes in US",
+          "link": "https://news.mongabay.com/2026/03/belugas-facing-euthanasia-at-shuttered-canada-theme-park-may-find-new-homes-in-us/",
+          "pubDate": "2026-03-11T20:45:56.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-11T20:45:56.000Z",
+      "lastUpdated": "2026-03-11T20:45:56.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773257167000-RushtoputAIdata",
+      "primaryTitle": "Rush to put AI data centers in space poses poorly understood dangers",
+      "primarySource": "Mongabay",
+      "primaryLink": "https://news.mongabay.com/2026/03/rush-to-put-ai-data-centers-in-space-poses-poorly-understood-dangers/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Mongabay",
+          "tier": 3,
+          "url": "https://news.mongabay.com/2026/03/rush-to-put-ai-data-centers-in-space-poses-poorly-understood-dangers/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Mongabay",
+          "title": "Rush to put AI data centers in space poses poorly understood dangers",
+          "link": "https://news.mongabay.com/2026/03/rush-to-put-ai-data-centers-in-space-poses-poorly-understood-dangers/",
+          "pubDate": "2026-03-11T19:26:07.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "innovation-tech",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-11T19:26:07.000Z",
+      "lastUpdated": "2026-03-11T19:26:07.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773253847000-SignificantHeartDi",
+      "primaryTitle": "Significant Heart Disease Risk Can Be Detected from Routine Mammograms Using AI – Up to 70% Greater",
+      "primarySource": "Good News Network",
+      "primaryLink": "https://www.goodnewsnetwork.org/significant-heart-disease-risk-can-be-detected-from-routine-mammograms-using-ai-up-to-70-greater/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Good News Network",
+          "tier": 2,
+          "url": "https://www.goodnewsnetwork.org/significant-heart-disease-risk-can-be-detected-from-routine-mammograms-using-ai-up-to-70-greater/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Good News Network",
+          "title": "Significant Heart Disease Risk Can Be Detected from Routine Mammograms Using AI – Up to 70% Greater",
+          "link": "https://www.goodnewsnetwork.org/significant-heart-disease-risk-can-be-detected-from-routine-mammograms-using-ai-up-to-70-greater/",
+          "pubDate": "2026-03-11T18:30:47.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "science-health",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T18:30:47.000Z",
+      "lastUpdated": "2026-03-11T18:30:47.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773237612000-MeettheOAPsolda",
+      "primaryTitle": "Meet the OAPs (old age protesters) getting arrested for climate activism",
+      "primarySource": "Positive.News",
+      "primaryLink": "https://www.positive.news/society/meet-the-oaps-old-age-protesters-getting-arrested-for-climate-activism/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Positive.News",
+          "tier": 2,
+          "url": "https://www.positive.news/society/meet-the-oaps-old-age-protesters-getting-arrested-for-climate-activism/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Positive.News",
+          "title": "Meet the OAPs (old age protesters) getting arrested for climate activism",
+          "link": "https://www.positive.news/society/meet-the-oaps-old-age-protesters-getting-arrested-for-climate-activism/",
+          "pubDate": "2026-03-11T14:00:12.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "protest",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "climate-wins",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T14:00:12.000Z",
+      "lastUpdated": "2026-03-11T14:00:12.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "protest",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773234031000-SatellitesCanHelp",
+      "primaryTitle": "Satellites Can Help Predict Bridge Collapses by Spotting Tiny Changes, Thanks to Scientist’s Solution",
+      "primarySource": "Good News Network",
+      "primaryLink": "https://www.goodnewsnetwork.org/satellites-can-find-tiny-changes-in-bridge-positions-that-signal-impending-collapse-study-shows/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Good News Network",
+          "tier": 2,
+          "url": "https://www.goodnewsnetwork.org/satellites-can-find-tiny-changes-in-bridge-positions-that-signal-impending-collapse-study-shows/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Good News Network",
+          "title": "Satellites Can Help Predict Bridge Collapses by Spotting Tiny Changes, Thanks to Scientist’s Solution",
+          "link": "https://www.goodnewsnetwork.org/satellites-can-find-tiny-changes-in-bridge-positions-that-signal-impending-collapse-study-shows/",
+          "pubDate": "2026-03-11T13:00:31.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T13:00:31.000Z",
+      "lastUpdated": "2026-03-11T13:00:31.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773234010000-BeautifulTortoisesh",
+      "primaryTitle": "Beautiful Tortoiseshell Butterfly Recolonizes England Decades After Elm Disease Had Eliminated it",
+      "primarySource": "Good News Network",
+      "primaryLink": "https://www.goodnewsnetwork.org/big-brown-beautiful-butterfly-recolonizes-england-decades-after-elm-disease-had-eliminated-it/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Good News Network",
+          "tier": 2,
+          "url": "https://www.goodnewsnetwork.org/big-brown-beautiful-butterfly-recolonizes-england-decades-after-elm-disease-had-eliminated-it/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Good News Network",
+          "title": "Beautiful Tortoiseshell Butterfly Recolonizes England Decades After Elm Disease Had Eliminated it",
+          "link": "https://www.goodnewsnetwork.org/big-brown-beautiful-butterfly-recolonizes-england-decades-after-elm-disease-had-eliminated-it/",
+          "pubDate": "2026-03-11T13:00:10.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "science-health",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T13:00:10.000Z",
+      "lastUpdated": "2026-03-11T13:00:10.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773226840000-TheMiracleBerry",
+      "primaryTitle": "The ‘Miracle Berry’ Helps Chemo Patients Remove Metallic Taste So They Can Enjoy Food Again",
+      "primarySource": "Good News Network",
+      "primaryLink": "https://www.goodnewsnetwork.org/the-miracle-berry-helps-chemo-patients-remove-metallic-taste-so-they-can-enjoy-food-again/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Good News Network",
+          "tier": 2,
+          "url": "https://www.goodnewsnetwork.org/the-miracle-berry-helps-chemo-patients-remove-metallic-taste-so-they-can-enjoy-food-again/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Good News Network",
+          "title": "The ‘Miracle Berry’ Helps Chemo Patients Remove Metallic Taste So They Can Enjoy Food Again",
+          "link": "https://www.goodnewsnetwork.org/the-miracle-berry-helps-chemo-patients-remove-metallic-taste-so-they-can-enjoy-food-again/",
+          "pubDate": "2026-03-11T11:00:40.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T11:00:40.000Z",
+      "lastUpdated": "2026-03-11T11:00:40.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773224362000-Scientistsmayhave",
+      "primaryTitle": "Scientists may have found a pill for sleep apnea",
+      "primarySource": "ScienceDaily",
+      "primaryLink": "https://www.sciencedaily.com/releases/2026/03/260311004816.htm",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "ScienceDaily",
+          "tier": 4,
+          "url": "https://www.sciencedaily.com/releases/2026/03/260311004816.htm"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "ScienceDaily",
+          "title": "Scientists may have found a pill for sleep apnea",
+          "link": "https://www.sciencedaily.com/releases/2026/03/260311004816.htm",
+          "pubDate": "2026-03-11T10:19:22.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "science-health",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-11T10:19:22.000Z",
+      "lastUpdated": "2026-03-11T10:19:22.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773223555000-Scientistsdiscover",
+      "primaryTitle": "Scientists discover tiny plant trick that could supercharge crop yields",
+      "primarySource": "ScienceDaily",
+      "primaryLink": "https://www.sciencedaily.com/releases/2026/03/260311004716.htm",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "ScienceDaily",
+          "tier": 4,
+          "url": "https://www.sciencedaily.com/releases/2026/03/260311004716.htm"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "ScienceDaily",
+          "title": "Scientists discover tiny plant trick that could supercharge crop yields",
+          "link": "https://www.sciencedaily.com/releases/2026/03/260311004716.htm",
+          "pubDate": "2026-03-11T10:05:55.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "science-health",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-11T10:05:55.000Z",
+      "lastUpdated": "2026-03-11T10:05:55.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773216012000-WhatWereReading",
+      "primaryTitle": "What We’re Reading: Fireproofing Entire California Neighborhoods",
+      "primarySource": "Reasons to be Cheerful",
+      "primaryLink": "https://reasonstobecheerful.world/what-were-reading-fire-resistant-neighborhoods/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Reasons to be Cheerful",
+          "tier": 2,
+          "url": "https://reasonstobecheerful.world/what-were-reading-fire-resistant-neighborhoods/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Reasons to be Cheerful",
+          "title": "What We’re Reading: Fireproofing Entire California Neighborhoods",
+          "link": "https://reasonstobecheerful.world/what-were-reading-fire-resistant-neighborhoods/",
+          "pubDate": "2026-03-11T08:00:12.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "disaster",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T08:00:12.000Z",
+      "lastUpdated": "2026-03-11T08:00:12.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "disaster",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773212400000-GoodNewsinHistory",
+      "primaryTitle": "Good News in History, March 11",
+      "primarySource": "Good News Network",
+      "primaryLink": "https://www.goodnewsnetwork.org/events070311/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Good News Network",
+          "tier": 2,
+          "url": "https://www.goodnewsnetwork.org/events070311/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Good News Network",
+          "title": "Good News in History, March 11",
+          "link": "https://www.goodnewsnetwork.org/events070311/",
+          "pubDate": "2026-03-11T07:00:00.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T07:00:00.000Z",
+      "lastUpdated": "2026-03-11T07:00:00.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773211102000-Oceanwarmingmaysu",
+      "primaryTitle": "Ocean warming may supercharge a tiny microbe that controls marine nutrients",
+      "primarySource": "ScienceDaily",
+      "primaryLink": "https://www.sciencedaily.com/releases/2026/03/260311004708.htm",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "ScienceDaily",
+          "tier": 4,
+          "url": "https://www.sciencedaily.com/releases/2026/03/260311004708.htm"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "ScienceDaily",
+          "title": "Ocean warming may supercharge a tiny microbe that controls marine nutrients",
+          "link": "https://www.sciencedaily.com/releases/2026/03/260311004708.htm",
+          "pubDate": "2026-03-11T06:38:22.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "environmental",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "nature-wildlife",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-11T06:38:22.000Z",
+      "lastUpdated": "2026-03-11T06:38:22.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "environmental",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773207289000-Amassiveasteroidh",
+      "primaryTitle": "A massive asteroid hit the North Sea and triggered a 330-foot tsunami",
+      "primarySource": "ScienceDaily",
+      "primaryLink": "https://www.sciencedaily.com/releases/2026/03/260311004836.htm",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "ScienceDaily",
+          "tier": 4,
+          "url": "https://www.sciencedaily.com/releases/2026/03/260311004836.htm"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "ScienceDaily",
+          "title": "A massive asteroid hit the North Sea and triggered a 330-foot tsunami",
+          "link": "https://www.sciencedaily.com/releases/2026/03/260311004836.htm",
+          "pubDate": "2026-03-11T05:34:49.000Z",
+          "isAlert": true,
+          "threat": {
+            "level": "critical",
+            "category": "disaster",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-11T05:34:49.000Z",
+      "lastUpdated": "2026-03-11T05:34:49.000Z",
+      "isAlert": true,
+      "threat": {
+        "level": "critical",
+        "category": "disaster",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773204431000-Cannabisstudyfinds",
+      "primaryTitle": "Cannabis study finds THC can create false memories",
+      "primarySource": "ScienceDaily",
+      "primaryLink": "https://www.sciencedaily.com/releases/2026/03/260311004711.htm",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "ScienceDaily",
+          "tier": 4,
+          "url": "https://www.sciencedaily.com/releases/2026/03/260311004711.htm"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "ScienceDaily",
+          "title": "Cannabis study finds THC can create false memories",
+          "link": "https://www.sciencedaily.com/releases/2026/03/260311004711.htm",
+          "pubDate": "2026-03-11T04:47:11.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "science-health",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-11T04:47:11.000Z",
+      "lastUpdated": "2026-03-11T04:47:11.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773187255000-ChinasGreatGreen",
+      "primaryTitle": "China’s Great Green Wall turns Taklamakan desert into a growing carbon sink",
+      "primarySource": "Optimist Daily",
+      "primaryLink": "https://www.optimistdaily.com/2026/03/chinas-great-green-wall-turns-taklamakan-desert-into-a-growing-carbon-sink/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Optimist Daily",
+          "tier": 2,
+          "url": "https://www.optimistdaily.com/2026/03/chinas-great-green-wall-turns-taklamakan-desert-into-a-growing-carbon-sink/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Optimist Daily",
+          "title": "China’s Great Green Wall turns Taklamakan desert into a growing carbon sink",
+          "link": "https://www.optimistdaily.com/2026/03/chinas-great-green-wall-turns-taklamakan-desert-into-a-growing-carbon-sink/",
+          "pubDate": "2026-03-11T00:00:55.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "environmental",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "climate-wins",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T00:00:55.000Z",
+      "lastUpdated": "2026-03-11T00:00:55.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "environmental",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773187245000-Whereandwhentoca",
+      "primaryTitle": "Where and when to catch peak cherry blossom bloom across the US this spring",
+      "primarySource": "Optimist Daily",
+      "primaryLink": "https://www.optimistdaily.com/2026/03/where-and-when-to-catch-peak-cherry-blossom-bloom-across-the-us-this-spring/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Optimist Daily",
+          "tier": 2,
+          "url": "https://www.optimistdaily.com/2026/03/where-and-when-to-catch-peak-cherry-blossom-bloom-across-the-us-this-spring/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Optimist Daily",
+          "title": "Where and when to catch peak cherry blossom bloom across the US this spring",
+          "link": "https://www.optimistdaily.com/2026/03/where-and-when-to-catch-peak-cherry-blossom-bloom-across-the-us-this-spring/",
+          "pubDate": "2026-03-11T00:00:45.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-11T00:00:45.000Z",
+      "lastUpdated": "2026-03-11T00:00:45.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773176940000-InaFirstResearch",
+      "primaryTitle": "In a First, Researchers Use Stem Cells and Surgery to Treat Spina Bifida in the Womb",
+      "primarySource": "Singularity Hub",
+      "primaryLink": "https://singularityhub.com/2026/03/10/in-a-first-researchers-use-stem-cells-and-surgery-to-treat-spina-bifida-in-the-womb/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Singularity Hub",
+          "tier": 4,
+          "url": "https://singularityhub.com/2026/03/10/in-a-first-researchers-use-stem-cells-and-surgery-to-treat-spina-bifida-in-the-womb/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Singularity Hub",
+          "title": "In a First, Researchers Use Stem Cells and Surgery to Treat Spina Bifida in the Womb",
+          "link": "https://singularityhub.com/2026/03/10/in-a-first-researchers-use-stem-cells-and-surgery-to-treat-spina-bifida-in-the-womb/",
+          "pubDate": "2026-03-10T21:09:00.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "science-health",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T21:09:00.000Z",
+      "lastUpdated": "2026-03-10T21:09:00.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.3,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773169550000-WhatItsLiketoHa",
+      "primaryTitle": "What It’s Like to Have a Brain Implant for 5 Years",
+      "primarySource": "Human Progress",
+      "primaryLink": "https://humanprogress.org/what-its-like-to-have-a-brain-implant-for-5-years/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Human Progress",
+          "tier": 4,
+          "url": "https://humanprogress.org/what-its-like-to-have-a-brain-implant-for-5-years/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Human Progress",
+          "title": "What It’s Like to Have a Brain Implant for 5 Years",
+          "link": "https://humanprogress.org/what-its-like-to-have-a-brain-implant-for-5-years/",
+          "pubDate": "2026-03-10T19:05:50.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T19:05:50.000Z",
+      "lastUpdated": "2026-03-10T19:05:50.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773168744000-NuclearSafetyRules",
+      "primaryTitle": "Nuclear Safety Rules Rewritten to Accelerate Development",
+      "primarySource": "Human Progress",
+      "primaryLink": "https://humanprogress.org/nuclear-safety-rules-rewritten-to-accelerate-development/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Human Progress",
+          "tier": 4,
+          "url": "https://humanprogress.org/nuclear-safety-rules-rewritten-to-accelerate-development/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Human Progress",
+          "title": "Nuclear Safety Rules Rewritten to Accelerate Development",
+          "link": "https://humanprogress.org/nuclear-safety-rules-rewritten-to-accelerate-development/",
+          "pubDate": "2026-03-10T18:52:24.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T18:52:24.000Z",
+      "lastUpdated": "2026-03-10T18:52:24.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773168349000-IndiasEconomyIsG",
+      "primaryTitle": "India’s Economy Is Growing Faster than Previously Believed",
+      "primarySource": "Human Progress",
+      "primaryLink": "https://humanprogress.org/indias-economy-is-growing-faster-than-previously-believed/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Human Progress",
+          "tier": 4,
+          "url": "https://humanprogress.org/indias-economy-is-growing-faster-than-previously-believed/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Human Progress",
+          "title": "India’s Economy Is Growing Faster than Previously Believed",
+          "link": "https://humanprogress.org/indias-economy-is-growing-faster-than-previously-believed/",
+          "pubDate": "2026-03-10T18:45:49.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "economic",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T18:45:49.000Z",
+      "lastUpdated": "2026-03-10T18:45:49.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "economic",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773167991000-TheFirstMultiBeha",
+      "primaryTitle": "The First Multi-Behavior Brain Upload",
+      "primarySource": "Human Progress",
+      "primaryLink": "https://humanprogress.org/the-first-multi-behavior-brain-upload/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Human Progress",
+          "tier": 4,
+          "url": "https://humanprogress.org/the-first-multi-behavior-brain-upload/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Human Progress",
+          "title": "The First Multi-Behavior Brain Upload",
+          "link": "https://humanprogress.org/the-first-multi-behavior-brain-upload/",
+          "pubDate": "2026-03-10T18:39:51.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T18:39:51.000Z",
+      "lastUpdated": "2026-03-10T18:39:51.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773167770000-StemCellTherapies",
+      "primaryTitle": "Stem Cell Therapies “Come of Age” with Approvals in Japan",
+      "primarySource": "Human Progress",
+      "primaryLink": "https://humanprogress.org/stem-cell-therapies-come-of-age-with-two-conditional-approvals-in-japan/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Human Progress",
+          "tier": 4,
+          "url": "https://humanprogress.org/stem-cell-therapies-come-of-age-with-two-conditional-approvals-in-japan/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Human Progress",
+          "title": "Stem Cell Therapies “Come of Age” with Approvals in Japan",
+          "link": "https://humanprogress.org/stem-cell-therapies-come-of-age-with-two-conditional-approvals-in-japan/",
+          "pubDate": "2026-03-10T18:36:10.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-10T18:36:10.000Z",
+      "lastUpdated": "2026-03-10T18:36:10.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773141002000-Storiesofconserva",
+      "primaryTitle": "Stories of #conservationoptimism from the past couple of weeks",
+      "primarySource": "Conservation Optimism",
+      "primaryLink": "https://conservationoptimism.org/stories-of-conservationoptimism-from-the-past-couple-of-weeks/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Conservation Optimism",
+          "tier": 3,
+          "url": "https://conservationoptimism.org/stories-of-conservationoptimism-from-the-past-couple-of-weeks/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Conservation Optimism",
+          "title": "Stories of #conservationoptimism from the past couple of weeks",
+          "link": "https://conservationoptimism.org/stories-of-conservationoptimism-from-the-past-couple-of-weeks/",
+          "pubDate": "2026-03-10T11:10:02.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "environmental",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "nature-wildlife",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-10T11:10:02.000Z",
+      "lastUpdated": "2026-03-10T11:10:02.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "environmental",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773140410000-KindRestaurantOwne",
+      "primaryTitle": "Kind Restaurant Owners Take Entire Staff on Paid Bahamas Vacation",
+      "primarySource": "GNN Heroes",
+      "primaryLink": "https://www.goodnewsnetwork.org/kind-restaurant-owners-take-entire-staff-on-paid-bahamas-vacation/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "GNN Heroes",
+          "tier": 3,
+          "url": "https://www.goodnewsnetwork.org/kind-restaurant-owners-take-entire-staff-on-paid-bahamas-vacation/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "GNN Heroes",
+          "title": "Kind Restaurant Owners Take Entire Staff on Paid Bahamas Vacation",
+          "link": "https://www.goodnewsnetwork.org/kind-restaurant-owners-take-entire-staff-on-paid-bahamas-vacation/",
+          "pubDate": "2026-03-10T11:00:10.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-10T11:00:10.000Z",
+      "lastUpdated": "2026-03-10T11:00:10.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773129640000-TheSpiritualMoveme",
+      "primaryTitle": "The Spiritual Movement Saving a Gentle Giant",
+      "primarySource": "Reasons to be Cheerful",
+      "primaryLink": "https://reasonstobecheerful.world/whale-sharks-spiritual-movement-saving-a-gentle-giant/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Reasons to be Cheerful",
+          "tier": 2,
+          "url": "https://reasonstobecheerful.world/whale-sharks-spiritual-movement-saving-a-gentle-giant/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Reasons to be Cheerful",
+          "title": "The Spiritual Movement Saving a Gentle Giant",
+          "link": "https://reasonstobecheerful.world/whale-sharks-spiritual-movement-saving-a-gentle-giant/",
+          "pubDate": "2026-03-10T08:00:40.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-10T08:00:40.000Z",
+      "lastUpdated": "2026-03-10T08:00:40.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773126036000-Anewstudyjustdeb",
+      "primaryTitle": "A new study just debunked a heat pump myth",
+      "primarySource": "Positive.News",
+      "primaryLink": "https://www.positive.news/environment/heat-pumps-put-less-pressure-on-the-grid-than-expected/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Positive.News",
+          "tier": 2,
+          "url": "https://www.positive.news/environment/heat-pumps-put-less-pressure-on-the-grid-than-expected/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Positive.News",
+          "title": "A new study just debunked a heat pump myth",
+          "link": "https://www.positive.news/environment/heat-pumps-put-less-pressure-on-the-grid-than-expected/",
+          "pubDate": "2026-03-10T07:00:36.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-10T07:00:36.000Z",
+      "lastUpdated": "2026-03-10T07:00:36.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773100844000-Pinknoiseforsleep",
+      "primaryTitle": "Pink noise for sleep: what it is and whether it actually helps you rest",
+      "primarySource": "Optimist Daily",
+      "primaryLink": "https://www.optimistdaily.com/2026/03/pink-noise-for-sleep-what-it-is-and-whether-it-actually-helps-you-rest/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Optimist Daily",
+          "tier": 2,
+          "url": "https://www.optimistdaily.com/2026/03/pink-noise-for-sleep-what-it-is-and-whether-it-actually-helps-you-rest/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Optimist Daily",
+          "title": "Pink noise for sleep: what it is and whether it actually helps you rest",
+          "link": "https://www.optimistdaily.com/2026/03/pink-noise-for-sleep-what-it-is-and-whether-it-actually-helps-you-rest/",
+          "pubDate": "2026-03-10T00:00:44.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-10T00:00:44.000Z",
+      "lastUpdated": "2026-03-10T00:00:44.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773100806000-Firstbabybornafte",
+      "primaryTitle": "First baby born after womb transplant from deceased donor offers new hope",
+      "primarySource": "Optimist Daily",
+      "primaryLink": "https://www.optimistdaily.com/2026/03/first-baby-born-after-womb-transplant-from-deceased-donor-offers-new-hope/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Optimist Daily",
+          "tier": 2,
+          "url": "https://www.optimistdaily.com/2026/03/first-baby-born-after-womb-transplant-from-deceased-donor-offers-new-hope/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Optimist Daily",
+          "title": "First baby born after womb transplant from deceased donor offers new hope",
+          "link": "https://www.optimistdaily.com/2026/03/first-baby-born-after-womb-transplant-from-deceased-donor-offers-new-hope/",
+          "pubDate": "2026-03-10T00:00:06.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "health",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-10T00:00:06.000Z",
+      "lastUpdated": "2026-03-10T00:00:06.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "health",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773097677000-HackersAreAutomati",
+      "primaryTitle": "Hackers Are Automating Cyberattacks With AI. Defenders Are Using It to Fight Back.",
+      "primarySource": "Singularity Hub",
+      "primaryLink": "https://singularityhub.com/2026/03/09/hackers-are-automating-cyberattacks-with-ai-defenders-are-using-it-to-fight-back/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Singularity Hub",
+          "tier": 4,
+          "url": "https://singularityhub.com/2026/03/09/hackers-are-automating-cyberattacks-with-ai-defenders-are-using-it-to-fight-back/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Singularity Hub",
+          "title": "Hackers Are Automating Cyberattacks With AI. Defenders Are Using It to Fight Back.",
+          "link": "https://singularityhub.com/2026/03/09/hackers-are-automating-cyberattacks-with-ai-defenders-are-using-it-to-fight-back/",
+          "pubDate": "2026-03-09T23:07:57.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "cyber",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-09T23:07:57.000Z",
+      "lastUpdated": "2026-03-09T23:07:57.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "cyber",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773050620000-InRomanianowyou",
+      "primaryTitle": "‘In Romania now, you don’t see a bottle anywhere’",
+      "primarySource": "Positive.News",
+      "primaryLink": "https://www.positive.news/economics/romanias-recycling-revolution-lifts-off/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Positive.News",
+          "tier": 2,
+          "url": "https://www.positive.news/economics/romanias-recycling-revolution-lifts-off/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Positive.News",
+          "title": "‘In Romania now, you don’t see a bottle anywhere’",
+          "link": "https://www.positive.news/economics/romanias-recycling-revolution-lifts-off/",
+          "pubDate": "2026-03-09T10:03:40.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-09T10:03:40.000Z",
+      "lastUpdated": "2026-03-09T10:03:40.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773043215000-TheDIYSolarRevolu",
+      "primaryTitle": "The DIY Solar Revolution Is Coming to U.S. Balconies",
+      "primarySource": "Reasons to be Cheerful",
+      "primaryLink": "https://reasonstobecheerful.world/diy-balcony-solar-revolution-america/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Reasons to be Cheerful",
+          "tier": 2,
+          "url": "https://reasonstobecheerful.world/diy-balcony-solar-revolution-america/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Reasons to be Cheerful",
+          "title": "The DIY Solar Revolution Is Coming to U.S. Balconies",
+          "link": "https://reasonstobecheerful.world/diy-balcony-solar-revolution-america/",
+          "pubDate": "2026-03-09T08:00:15.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "climate-wins",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-09T08:00:15.000Z",
+      "lastUpdated": "2026-03-09T08:00:15.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1773014435000-Panamasgoldenfrog",
+      "primaryTitle": "Panama’s golden frogs return to the wild after 17-year battle with deadly fungus",
+      "primarySource": "Optimist Daily",
+      "primaryLink": "https://www.optimistdaily.com/2026/03/panamas-golden-frogs-return-to-the-wild-after-17-year-battle-with-deadly-fungus/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Optimist Daily",
+          "tier": 2,
+          "url": "https://www.optimistdaily.com/2026/03/panamas-golden-frogs-return-to-the-wild-after-17-year-battle-with-deadly-fungus/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Optimist Daily",
+          "title": "Panama’s golden frogs return to the wild after 17-year battle with deadly fungus",
+          "link": "https://www.optimistdaily.com/2026/03/panamas-golden-frogs-return-to-the-wild-after-17-year-battle-with-deadly-fungus/",
+          "pubDate": "2026-03-09T00:00:35.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "environmental",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-09T00:00:35.000Z",
+      "lastUpdated": "2026-03-09T00:00:35.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "environmental",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772895600000-ThisWeeksAwesome",
+      "primaryTitle": "This Week’s Awesome Tech Stories From Around the Web (Through March 7)",
+      "primarySource": "Singularity Hub",
+      "primaryLink": "https://singularityhub.com/2026/03/07/this-weeks-awesome-tech-stories-from-around-the-web-through-march-7-2/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Singularity Hub",
+          "tier": 4,
+          "url": "https://singularityhub.com/2026/03/07/this-weeks-awesome-tech-stories-from-around-the-web-through-march-7-2/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Singularity Hub",
+          "title": "This Week’s Awesome Tech Stories From Around the Web (Through March 7)",
+          "link": "https://singularityhub.com/2026/03/07/this-weeks-awesome-tech-stories-from-around-the-web-through-march-7-2/",
+          "pubDate": "2026-03-07T15:00:00.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-07T15:00:00.000Z",
+      "lastUpdated": "2026-03-07T15:00:00.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772834596000-AutonomousAIAgents",
+      "primaryTitle": "Autonomous AI Agents Have an Ethics Problem",
+      "primarySource": "Singularity Hub",
+      "primaryLink": "https://singularityhub.com/2026/03/06/autonomous-ai-agents-have-an-ethics-problem/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Singularity Hub",
+          "tier": 4,
+          "url": "https://singularityhub.com/2026/03/06/autonomous-ai-agents-have-an-ethics-problem/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Singularity Hub",
+          "title": "Autonomous AI Agents Have an Ethics Problem",
+          "link": "https://singularityhub.com/2026/03/06/autonomous-ai-agents-have-an-ethics-problem/",
+          "pubDate": "2026-03-06T22:03:16.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "innovation-tech",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-06T22:03:16.000Z",
+      "lastUpdated": "2026-03-06T22:03:16.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772784031000-MoldovasSecretMos",
+      "primaryTitle": "Moldova’s Secret Mosaic Masterpieces",
+      "primarySource": "Reasons to be Cheerful",
+      "primaryLink": "https://reasonstobecheerful.world/moldova-mosaic-masterpieces/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Reasons to be Cheerful",
+          "tier": 2,
+          "url": "https://reasonstobecheerful.world/moldova-mosaic-masterpieces/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Reasons to be Cheerful",
+          "title": "Moldova’s Secret Mosaic Masterpieces",
+          "link": "https://reasonstobecheerful.world/moldova-mosaic-masterpieces/",
+          "pubDate": "2026-03-06T08:00:31.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-06T08:00:31.000Z",
+      "lastUpdated": "2026-03-06T08:00:31.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772774209000-Whatwentrightthis",
+      "primaryTitle": "What went right this week: the good news that matters",
+      "primarySource": "Positive.News",
+      "primaryLink": "https://www.positive.news/society/good-news-stories-from-week-10-of-2026/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Positive.News",
+          "tier": 2,
+          "url": "https://www.positive.news/society/good-news-stories-from-week-10-of-2026/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Positive.News",
+          "title": "What went right this week: the good news that matters",
+          "link": "https://www.positive.news/society/good-news-stories-from-week-10-of-2026/",
+          "pubDate": "2026-03-06T05:16:49.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-06T05:16:49.000Z",
+      "lastUpdated": "2026-03-06T05:16:49.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772738018000-ThousandsofEveryda",
+      "primaryTitle": "Thousands of Everyday Drone Pilots Are Making a Google Street View From Above",
+      "primarySource": "Singularity Hub",
+      "primaryLink": "https://singularityhub.com/2026/03/05/thousands-of-everyday-drone-pilots-are-making-a-google-street-view-from-above/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Singularity Hub",
+          "tier": 4,
+          "url": "https://singularityhub.com/2026/03/05/thousands-of-everyday-drone-pilots-are-making-a-google-street-view-from-above/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Singularity Hub",
+          "title": "Thousands of Everyday Drone Pilots Are Making a Google Street View From Above",
+          "link": "https://singularityhub.com/2026/03/05/thousands-of-everyday-drone-pilots-are-making-a-google-street-view-from-above/",
+          "pubDate": "2026-03-05T19:13:38.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 4
+        }
+      ],
+      "firstSeen": "2026-03-05T19:13:38.000Z",
+      "lastUpdated": "2026-03-05T19:13:38.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772712009000-PhillyManUsesMobi",
+      "primaryTitle": "Philly Man Uses Mobile Laundromat to Wash Homeless Residents’ Clothes",
+      "primarySource": "GNN Heroes",
+      "primaryLink": "https://www.goodnewsnetwork.org/philly-man-uses-mobile-laundromat-to-wash-homeless-residents-clothes/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "GNN Heroes",
+          "tier": 3,
+          "url": "https://www.goodnewsnetwork.org/philly-man-uses-mobile-laundromat-to-wash-homeless-residents-clothes/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "GNN Heroes",
+          "title": "Philly Man Uses Mobile Laundromat to Wash Homeless Residents’ Clothes",
+          "link": "https://www.goodnewsnetwork.org/philly-man-uses-mobile-laundromat-to-wash-homeless-residents-clothes/",
+          "pubDate": "2026-03-05T12:00:09.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-05T12:00:09.000Z",
+      "lastUpdated": "2026-03-05T12:00:09.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772708421000-Howa1930shousewa",
+      "primaryTitle": "How a 1930s house was turned into a carbon-negative home",
+      "primarySource": "Positive.News",
+      "primaryLink": "https://www.positive.news/society/how-a-1930s-home-was-retrofit-to-become-carbon-negative/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Positive.News",
+          "tier": 2,
+          "url": "https://www.positive.news/society/how-a-1930s-home-was-retrofit-to-become-carbon-negative/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Positive.News",
+          "title": "How a 1930s house was turned into a carbon-negative home",
+          "link": "https://www.positive.news/society/how-a-1930s-home-was-retrofit-to-become-carbon-negative/",
+          "pubDate": "2026-03-05T11:00:21.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "tech",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "climate-wins",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-05T11:00:21.000Z",
+      "lastUpdated": "2026-03-05T11:00:21.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "tech",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772697600000-TheGermanCityThat",
+      "primaryTitle": "The German City That Defied McDonald’s and Dumped ‘To-Go’ Waste",
+      "primarySource": "Reasons to be Cheerful",
+      "primaryLink": "https://reasonstobecheerful.world/tubingen-germany-defied-mcdonalds-dumped-to-go-waste/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Reasons to be Cheerful",
+          "tier": 2,
+          "url": "https://reasonstobecheerful.world/tubingen-germany-defied-mcdonalds-dumped-to-go-waste/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Reasons to be Cheerful",
+          "title": "The German City That Defied McDonald’s and Dumped ‘To-Go’ Waste",
+          "link": "https://reasonstobecheerful.world/tubingen-germany-defied-mcdonalds-dumped-to-go-waste/",
+          "pubDate": "2026-03-05T08:00:00.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-03-05T08:00:00.000Z",
+      "lastUpdated": "2026-03-05T08:00:00.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772546447000-CroatiaDeclaredLan",
+      "primaryTitle": "Croatia Declared Landmine-free After More Than 2 Decades of Demining Efforts",
+      "primarySource": "GNN Heroes",
+      "primaryLink": "https://www.goodnewsnetwork.org/croatia-declared-landmine-free-after-more-than-2-decades-of-demining-efforts/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "GNN Heroes",
+          "tier": 3,
+          "url": "https://www.goodnewsnetwork.org/croatia-declared-landmine-free-after-more-than-2-decades-of-demining-efforts/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "GNN Heroes",
+          "title": "Croatia Declared Landmine-free After More Than 2 Decades of Demining Efforts",
+          "link": "https://www.goodnewsnetwork.org/croatia-declared-landmine-free-after-more-than-2-decades-of-demining-efforts/",
+          "pubDate": "2026-03-03T14:00:47.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "disaster",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-03T14:00:47.000Z",
+      "lastUpdated": "2026-03-03T14:00:47.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "disaster",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772539232000-KazakhstanPlants37",
+      "primaryTitle": "Kazakhstan Plants 37,000 Seedlings to Prepare for Imminent Return of Tigers",
+      "primarySource": "GNN Heroes",
+      "primaryLink": "https://www.goodnewsnetwork.org/kazakhstan-plants-37000-seedlings-to-prepare-for-imminent-return-of-tigers/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "GNN Heroes",
+          "tier": 3,
+          "url": "https://www.goodnewsnetwork.org/kazakhstan-plants-37000-seedlings-to-prepare-for-imminent-return-of-tigers/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "GNN Heroes",
+          "title": "Kazakhstan Plants 37,000 Seedlings to Prepare for Imminent Return of Tigers",
+          "link": "https://www.goodnewsnetwork.org/kazakhstan-plants-37000-seedlings-to-prepare-for-imminent-return-of-tigers/",
+          "pubDate": "2026-03-03T12:00:32.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "environmental",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-03-03T12:00:32.000Z",
+      "lastUpdated": "2026-03-03T12:00:32.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "environmental",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1772290844000-DozensofStrangers",
+      "primaryTitle": "Dozens of Strangers Form Parade for Man with Cancer, Driving Classic Cars Passed his Home for One Last Surprise (WATCH)",
+      "primarySource": "GNN Heroes",
+      "primaryLink": "https://www.goodnewsnetwork.org/dozens-of-strangers-form-parade-for-man-with-cancer-driving-classic-cars-past-his-home-for-one-last-surprise-watch/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "GNN Heroes",
+          "tier": 3,
+          "url": "https://www.goodnewsnetwork.org/dozens-of-strangers-form-parade-for-man-with-cancer-driving-classic-cars-past-his-home-for-one-last-surprise-watch/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "GNN Heroes",
+          "title": "Dozens of Strangers Form Parade for Man with Cancer, Driving Classic Cars Passed his Home for One Last Surprise (WATCH)",
+          "link": "https://www.goodnewsnetwork.org/dozens-of-strangers-form-parade-for-man-with-cancer-driving-classic-cars-past-his-home-for-one-last-surprise-watch/",
+          "pubDate": "2026-02-28T15:00:44.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-02-28T15:00:44.000Z",
+      "lastUpdated": "2026-02-28T15:00:44.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1771960480000-Asstateandcorpora",
+      "primaryTitle": "As state and corporate surveillance intensifies, a new guide aims to help mutual aid organizations protect themselves",
+      "primarySource": "Shareable",
+      "primaryLink": "https://www.shareable.net/as-state-and-corporate-surveillance-intensifies-a-new-guide-aims-to-help-mutual-aid-organizations-protect-themselves/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Shareable",
+          "tier": 3,
+          "url": "https://www.shareable.net/as-state-and-corporate-surveillance-intensifies-a-new-guide-aims-to-help-mutual-aid-organizations-protect-themselves/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Shareable",
+          "title": "As state and corporate surveillance intensifies, a new guide aims to help mutual aid organizations protect themselves",
+          "link": "https://www.shareable.net/as-state-and-corporate-surveillance-intensifies-a-new-guide-aims-to-help-mutual-aid-organizations-protect-themselves/",
+          "pubDate": "2026-02-24T19:14:40.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-02-24T19:14:40.000Z",
+      "lastUpdated": "2026-02-24T19:14:40.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.3,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1769441249000-7storiesofoptimis",
+      "primaryTitle": "7 stories of optimism this week (17.02.26-23.02.26)",
+      "primarySource": "Conservation Optimism",
+      "primaryLink": "https://conservationoptimism.org/7-stories-of-optimism-this-week-17-02-26-23-02-26/",
+      "sourceCount": 4,
+      "topSources": [
+        {
+          "name": "Conservation Optimism",
+          "tier": 3,
+          "url": "https://conservationoptimism.org/7-stories-of-optimism-this-week-17-02-26-23-02-26/"
+        },
+        {
+          "name": "Conservation Optimism",
+          "tier": 3,
+          "url": "https://conservationoptimism.org/7-stories-of-optimism-this-week-09-02-26-16-02-26/"
+        },
+        {
+          "name": "Conservation Optimism",
+          "tier": 3,
+          "url": "https://conservationoptimism.org/7-stories-of-optimism-this-week-02-02-26-08-02-26/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Conservation Optimism",
+          "title": "7 stories of optimism this week (17.02.26-23.02.26)",
+          "link": "https://conservationoptimism.org/7-stories-of-optimism-this-week-17-02-26-23-02-26/",
+          "pubDate": "2026-02-24T14:40:02.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        },
+        {
+          "source": "Conservation Optimism",
+          "title": "7 stories of optimism this week (09.02.26-16.02.26)",
+          "link": "https://conservationoptimism.org/7-stories-of-optimism-this-week-09-02-26-16-02-26/",
+          "pubDate": "2026-02-17T06:53:05.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        },
+        {
+          "source": "Conservation Optimism",
+          "title": "7 stories of optimism this week (02.02.26-08.02.26)",
+          "link": "https://conservationoptimism.org/7-stories-of-optimism-this-week-02-02-26-08-02-26/",
+          "pubDate": "2026-02-08T12:59:26.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        },
+        {
+          "source": "Conservation Optimism",
+          "title": "7 stories of optimism this week (20.01.26-26.01.26)",
+          "link": "https://conservationoptimism.org/7-stories-of-optimism-this-week-20-01-26-26-01-26/",
+          "pubDate": "2026-01-26T15:27:29.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.3,
+            "source": "keyword"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-01-26T15:27:29.000Z",
+      "lastUpdated": "2026-02-24T14:40:02.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.3,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1770843729000-BuildingaFutureWh",
+      "primaryTitle": "Building a Future When Empire Is Obsolete",
+      "primarySource": "Yes! Magazine",
+      "primaryLink": "https://www.yesmagazine.org/issues/2026/02/11/building-a-future-when-empire-is-obsolete",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Yes! Magazine",
+          "tier": 2,
+          "url": "https://www.yesmagazine.org/issues/2026/02/11/building-a-future-when-empire-is-obsolete"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Yes! Magazine",
+          "title": "Building a Future When Empire Is Obsolete",
+          "link": "https://www.yesmagazine.org/issues/2026/02/11/building-a-future-when-empire-is-obsolete",
+          "pubDate": "2026-02-11T21:02:09.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-02-11T21:02:09.000Z",
+      "lastUpdated": "2026-02-11T21:02:09.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1770308024000-SomaliCommunitiesA",
+      "primaryTitle": "Somali Communities Are Building Collective Power in the Face of Trump’s Attacks",
+      "primarySource": "Shareable",
+      "primaryLink": "https://www.shareable.net/somali-communities-are-building-collective-power-in-the-face-of-trumps-attacks/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Shareable",
+          "tier": 3,
+          "url": "https://www.shareable.net/somali-communities-are-building-collective-power-in-the-face-of-trumps-attacks/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Shareable",
+          "title": "Somali Communities Are Building Collective Power in the Face of Trump’s Attacks",
+          "link": "https://www.shareable.net/somali-communities-are-building-collective-power-in-the-face-of-trumps-attacks/",
+          "pubDate": "2026-02-05T16:13:44.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "conflict",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-02-05T16:13:44.000Z",
+      "lastUpdated": "2026-02-05T16:13:44.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "conflict",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1769030308000-Navigatingconflict",
+      "primaryTitle": "Navigating conflict in movement spaces",
+      "primarySource": "Shareable",
+      "primaryLink": "https://www.shareable.net/navigating-conflict-in-movement-spaces/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Shareable",
+          "tier": 3,
+          "url": "https://www.shareable.net/navigating-conflict-in-movement-spaces/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Shareable",
+          "title": "Navigating conflict in movement spaces",
+          "link": "https://www.shareable.net/navigating-conflict-in-movement-spaces/",
+          "pubDate": "2026-01-21T21:18:28.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "medium",
+            "category": "conflict",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-01-21T21:18:28.000Z",
+      "lastUpdated": "2026-01-21T21:18:28.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "medium",
+        "category": "conflict",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1768585383000-PeoplesBudgetsIns",
+      "primaryTitle": "People’s Budgets Insist on Care First—for and by Everyone",
+      "primarySource": "Shareable",
+      "primaryLink": "https://www.shareable.net/peoples-budgets-insist-on-care-first-for-and-by-everyone/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Shareable",
+          "tier": 3,
+          "url": "https://www.shareable.net/peoples-budgets-insist-on-care-first-for-and-by-everyone/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Shareable",
+          "title": "People’s Budgets Insist on Care First—for and by Everyone",
+          "link": "https://www.shareable.net/peoples-budgets-insist-on-care-first-for-and-by-everyone/",
+          "pubDate": "2026-01-16T17:43:03.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-01-16T17:43:03.000Z",
+      "lastUpdated": "2026-01-16T17:43:03.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1768409322000-RebellionsWorkan",
+      "primaryTitle": "Rebellions Work — and They Represent a Long Tradition",
+      "primarySource": "Yes! Magazine",
+      "primaryLink": "https://www.yesmagazine.org/issues/2026/01/14/rebellions-work-and-they-represent-a-long-tradition",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Yes! Magazine",
+          "tier": 2,
+          "url": "https://www.yesmagazine.org/issues/2026/01/14/rebellions-work-and-they-represent-a-long-tradition"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Yes! Magazine",
+          "title": "Rebellions Work — and They Represent a Long Tradition",
+          "link": "https://www.yesmagazine.org/issues/2026/01/14/rebellions-work-and-they-represent-a-long-tradition",
+          "pubDate": "2026-01-14T16:48:42.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2026-01-14T16:48:42.000Z",
+      "lastUpdated": "2026-01-14T16:48:42.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1767801791000-10PrinciplesofNex",
+      "primaryTitle": "10 Principles of Next Economy Enterprises: A Guide for Designing a Regenerative Future",
+      "primarySource": "Shareable",
+      "primaryLink": "https://www.shareable.net/10-principles-of-next-economy-enterprises-a-guide-for-designing-a-regenerative-future/",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Shareable",
+          "tier": 3,
+          "url": "https://www.shareable.net/10-principles-of-next-economy-enterprises-a-guide-for-designing-a-regenerative-future/"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Shareable",
+          "title": "10 Principles of Next Economy Enterprises: A Guide for Designing a Regenerative Future",
+          "link": "https://www.shareable.net/10-principles-of-next-economy-enterprises-a-guide-for-designing-a-regenerative-future/",
+          "pubDate": "2026-01-07T16:03:11.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 3
+        }
+      ],
+      "firstSeen": "2026-01-07T16:03:11.000Z",
+      "lastUpdated": "2026-01-07T16:03:11.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1765310034000-WeAllHaveaRespon",
+      "primaryTitle": "We All Have a Responsibility to End War",
+      "primarySource": "Yes! Magazine",
+      "primaryLink": "https://www.yesmagazine.org/issues/2025/12/09/we-all-have-a-responsibility-to-end-war",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Yes! Magazine",
+          "tier": 2,
+          "url": "https://www.yesmagazine.org/issues/2025/12/09/we-all-have-a-responsibility-to-end-war"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Yes! Magazine",
+          "title": "We All Have a Responsibility to End War",
+          "link": "https://www.yesmagazine.org/issues/2025/12/09/we-all-have-a-responsibility-to-end-war",
+          "pubDate": "2025-12-09T19:53:54.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2025-12-09T19:53:54.000Z",
+      "lastUpdated": "2025-12-09T19:53:54.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1762975864000-HungryforDemocracy",
+      "primaryTitle": "Hungry for Democracy",
+      "primarySource": "Yes! Magazine",
+      "primaryLink": "https://www.yesmagazine.org/issues/2025/11/12/hungry-for-democracy",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Yes! Magazine",
+          "tier": 2,
+          "url": "https://www.yesmagazine.org/issues/2025/11/12/hungry-for-democracy"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Yes! Magazine",
+          "title": "Hungry for Democracy",
+          "link": "https://www.yesmagazine.org/issues/2025/11/12/hungry-for-democracy",
+          "pubDate": "2025-11-12T19:31:04.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "info",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2025-11-12T19:31:04.000Z",
+      "lastUpdated": "2025-11-12T19:31:04.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "info",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    },
+    {
+      "id": "1761003574000-AtWhatRiskWillWe",
+      "primaryTitle": "At What Risk Will We Resist?",
+      "primarySource": "Yes! Magazine",
+      "primaryLink": "https://www.yesmagazine.org/issues/2025/10/20/at-what-risk-will-we-resist",
+      "sourceCount": 1,
+      "topSources": [
+        {
+          "name": "Yes! Magazine",
+          "tier": 2,
+          "url": "https://www.yesmagazine.org/issues/2025/10/20/at-what-risk-will-we-resist"
+        }
+      ],
+      "allItems": [
+        {
+          "source": "Yes! Magazine",
+          "title": "At What Risk Will We Resist?",
+          "link": "https://www.yesmagazine.org/issues/2025/10/20/at-what-risk-will-we-resist",
+          "pubDate": "2025-10-20T23:39:34.000Z",
+          "isAlert": false,
+          "threat": {
+            "level": "low",
+            "category": "general",
+            "confidence": 0.9,
+            "source": "llm"
+          },
+          "happyCategory": "humanity-kindness",
+          "tier": 2
+        }
+      ],
+      "firstSeen": "2025-10-20T23:39:34.000Z",
+      "lastUpdated": "2025-10-20T23:39:34.000Z",
+      "isAlert": false,
+      "threat": {
+        "level": "low",
+        "category": "general",
+        "confidence": 0.9,
+        "source": "keyword"
+      }
+    }
+  ],
+  "markets": [],
+  "predictions": [],
+  "timestamp": 1773289058893
+}
