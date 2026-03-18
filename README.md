@@ -1,35 +1,114 @@
-# Checkpoint FIAP - RPA & NLP (Cross-Tab Data Fusion)
+# Checkpoint FIAP — RPA & NLP (Cross-Tab Data Fusion + Análise de Sentimentos)
 
-**Objetivo:** Extração automatizada multi-domínio da plataforma [World Monitor](https://www.worldmonitor.app/) com cruzamento de dados tabulares (News + Markets + Predictions) para gerar um Contexto Sintético ("Prompt_Ready") consumível por pipelines de RAG (Retrieval-Augmented Generation).
+**Objetivo:** Pipeline automatizado que extrai dados da plataforma World Monitor via RPA, aplica análise de sentimentos com BERT e gera um relatório analítico com Google Gemini (RAG).
+
+**Integrantes:**
+
+| Nome | RM |
+|------|-----|
+| Nicolas Lemos Ribeiro | 553273 |
+| Ricardo de Paiva Melo | 565522 |
+| Luís Fernando de Oliveira Salgado | 561401 |
+| Pedro Leal Murad | 565460 |
+| Murilo Benhossi | 562358 |
+
+---
 
 ## Arquitetura do Projeto
 
 ```
-├── RPA_World_Monitor_Extração.ipynb   # Engine principal (RPA + Data Engineering + Fusão)
-├── index.html                         # Dashboard interativo (Intel Fusion Hub)
+fiap-rpa-wmdf/
+│
+├── RPA_World_Monitor_Extração.ipynb       # Etapa 1-2: RPA + Data Engineering
+├── NLP_Sentimentos_Resumo_Analitico.ipynb # Etapa 3-4: NLP + Resumo Analítico (RAG)
+├── index.html                              # Dashboard interativo (Intel Fusion Hub)
+│
 ├── output/
-│   └── nlp_ready_fusion.csv           # Dataset enriquecido final (Prompt_Ready para LLMs)
-├── raw_data/                          # Cache dos JSONs brutos por domínio
+│   ├── nlp_ready_fusion.csv                # Saída RPA: dataset intermediário (RPA → NLP)
+│   ├── resultado_sentimentos.csv           # Saída NLP: CSV com sentimentos classificados
+│   └── relatorio_analitico.md              # Saída NLP: Relatório gerado pelo Gemini
+│
+├── raw_data/
 │   ├── world_raw.json
 │   ├── tech_raw.json
 │   ├── finance_raw.json
 │   ├── commodity_raw.json
 │   └── happy_raw.json
-└── PRIMEIRO CHECKPOINT NLP & RPA_final.pdf  # Documentação acadêmica
+│
+└── PRIMEIRO CHECKPOINT NLP & RPA_final.pdf
 ```
 
-### Componentes
+---
 
-- **`RPA_World_Monitor_Extração.ipynb`** — Notebook que roda toda a pipeline: instalação de dependências, automação com Playwright (headless Chromium), parseamento JSON e fusão de dados. Utiliza uma **Dupla Estratégia de Extração**:
-  1. **DOM Scraping** — Percorre os painéis renderizados da SPA para capturar manchetes que o export JSON não inclui (World, Tech, Finance).
-  2. **JSON Export** — Download nativo para capturar dados de Markets (índices financeiros) e Predictions (Polymarket), além de news já preenchidas (Commodity, Good News).
-  3. **Merge inteligente** — Unifica as duas fontes com deduplicação por título.
+## Pipeline (Fluxo de Execução)
 
-- **`index.html`** — Dashboard "Intel Fusion Hub" construído com TailwindCSS + Chart.js. Permite file-upload do `nlp_ready_fusion.csv` e exibe indicadores numéricos, gráficos de distribuição por domínio, linha do tempo e listagem completa das notícias.
+### Etapa 1 — Coleta de Dados (RPA)
+**Notebook:** `RPA_World_Monitor_Extração.ipynb`
 
-- **`output/nlp_ready_fusion.csv`** — Arquivo final enriquecido com a coluna `Prompt_Ready`, que combina a manchete original com o contexto macroeconômico da bolsa mundial no mesmo instante temporal. Inclui tanto **News** quanto **Predictions** (Polymarket), diferenciados pela coluna `Tipo_Conteudo`.
+- Automação com **Playwright** (Chromium headless) na plataforma World Monitor
+- **Dupla Estratégia de Extração:**
+  1. **DOM Scraping** — captura manchetes dos painéis renderizados da SPA
+  2. **JSON Export** — download nativo para Markets e Predictions (Polymarket)
+- Coleta de **5 domínios:** World, Tech, Finance, Commodity, Good News
 
-- **`raw_data/`** — JSONs brutos extraídos dos 5 domínios, contendo as chaves `news`, `markets` e `predictions`.
+### Etapa 2 — Preparação dos Dados (RPA)
+**Notebook:** `RPA_World_Monitor_Extração.ipynb`
+
+- Parse dos JSONs brutos (news + markets + predictions)
+- **Cross-Tab Data Fusion:** enriquecimento com contexto macroeconômico
+- Geração da coluna `Prompt_Ready` (texto + contexto da bolsa)
+- **Saída:** `output/nlp_ready_fusion.csv` (~297 registros)
+
+### Etapa 3 — Análise de Sentimentos (NLP)
+**Notebook:** `NLP_Sentimentos_Resumo_Analitico.ipynb`
+
+- Pré-processamento: remoção de prefixos, normalização, stopwords
+- Modelo: **`nlptown/bert-base-multilingual-uncased-sentiment`** (HuggingFace)
+- Classificação: Positivo (4-5★) / Neutro (3★) / Negativo (1-2★)
+- Visualizações: distribuição, sentimento por domínio, wordclouds, confiança
+- **Saída:** `resultado_sentimentos.csv`
+
+### Etapa 4 — Resumo Analítico com RAG (NLP)
+**Notebook:** `NLP_Sentimentos_Resumo_Analitico.ipynb`
+
+- **RAG (Retrieval-Augmented Generation):**
+  1. Recuperação dos dados reais (estatísticas, manchetes, palavras-chave)
+  2. Montagem de prompt enriquecido com contexto do dataset
+  3. Geração com **Google Gemini 2.5 Flash Lite**
+- Relatório com: panorama geral, análise por domínio, riscos, oportunidades e recomendações
+- **Saída:** `relatorio_analitico.md`
+
+### Visualização — Dashboard (index.html)
+
+- Dashboard **Intel Fusion Hub** com TailwindCSS + Chart.js
+- Aceita upload manual de `resultado_sentimentos.csv` e `relatorio_analitico.md` (disponíveis na pasta `output/`)
+- Gráficos: donut de sentimentos, barras por domínio, confiança BERT
+- Tabela filtrável com busca, badges de sentimento e estrelas
+- Relatório analítico renderizado em Markdown
+
+---
+
+## Como Executar
+
+### 1. Notebook RPA (Google Colab)
+1. Abrir `RPA_World_Monitor_Extração.ipynb` no Google Colab
+2. Executar todas as células sequencialmente
+3. Baixar o arquivo `output/nlp_ready_fusion.csv` gerado
+
+### 2. Notebook NLP (Google Colab)
+1. Abrir `NLP_Sentimentos_Resumo_Analitico.ipynb` no Google Colab
+2. Fazer upload do `nlp_ready_fusion.csv` quando solicitado
+3. Configurar a API Key do Google Gemini (gratuita via [AI Studio](https://aistudio.google.com/apikey))
+4. Executar todas as células sequencialmente
+5. Baixar `resultado_sentimentos.csv` e `relatorio_analitico.md`
+
+### 3. Dashboard (Navegador)
+1. Abrir `index.html` no navegador
+2. Fazer upload do `resultado_sentimentos.csv`
+3. Fazer upload do `relatorio_analitico.md`
+4. Os dados e o relatório são exibidos automaticamente
+
+---
 
 ## Domínios Extraídos
 
@@ -41,38 +120,29 @@
 | Commodity | commodity.worldmonitor.app | Commodities, energia, agricultura |
 | Good News | happy.worldmonitor.app | Notícias positivas, avanços sociais |
 
-## Como Executar
-
-1. Abrir `RPA_World_Monitor_Extração.ipynb` no Google Colab ou Jupyter
-2. Executar todas as células sequencialmente — o notebook instala as dependências automaticamente (`playwright`, `nest_asyncio`, `pandas`, `tqdm`)
-3. O output será gerado em `output/nlp_ready_fusion.csv`
-4. Para visualizar, abrir `index.html` no navegador e fazer upload do CSV
-
-## Observações Técnicas (Volumetria e Temporalidade)
-
-1. **Volume de Dados (~250-260 registros únicos):** O arquivo final consolida em média 257 registros entre News e Predictions. Limites de paginação da API (~Top 50 por eixo) e deduplicação (`drop_duplicates`) determinam esse volume.
-
-2. **Intervalo Temporal Amplo:** A janela analítica abrange em média **5 meses** de notícias latentes, oferecendo profundidade para treino de ML.
-
-3. **Estabilidade entre Execuções:** Execuções no mesmo dia produzem outputs idênticos, atestando a estabilidade do motor RPA.
-
-4. **News Vazias em Alguns Domínios:** O export JSON dos domínios World, Tech e Finance retorna `"news": []` — isso é uma limitação da API, não um bug. A **Dupla Estratégia** (DOM Scraping) compensa essa limitação extraindo as manchetes diretamente dos painéis renderizados.
-
-5. **Dados de Mercado (Oportunidades Futuras):** Endpoints com `"news"` vazias trazem dados ricos em `"markets"` (tickers, preços, variações), abrindo caminho para um futuro `market_tickers.csv` para algoritmos de trading.
+---
 
 ## Stack Tecnológica
 
-- **RPA:** Playwright (Chromium headless) + asyncio
-- **Data Engineering:** Pandas, JSON parsing
-- **Frontend:** TailwindCSS, Chart.js, PapaParse, Lucide Icons
-- **Ambiente:** Google Colab / Jupyter Notebook
+| Componente | Tecnologia |
+|-----------|------------|
+| RPA | Playwright (Chromium headless) + asyncio |
+| Data Engineering | Pandas, JSON parsing |
+| NLP - Sentimentos | HuggingFace Transformers (BERT multilíngue) |
+| NLP - Resumo (RAG) | Google Gemini 2.5 Flash Lite |
+| Frontend | TailwindCSS, Chart.js, PapaParse, Marked.js, Lucide Icons |
+| Ambiente | Google Colab |
 
-## Integrantes do Grupo
+---
 
-| Nome | RM |
-|------|-----|
-| Nicolas Lemos Ribeiro | 553273 |
-| Ricardo de Paiva Melo | 565522 |
-| Luís Fernando de Oliveira Salgado | 561401 |
-| Pedro Leal Murad | 565460 |
-| Murilo Benhossi | 562358 |
+## Resultados
+
+- **297 textos** analisados de 5 domínios
+- **54.9% Positivos** | **3.0% Neutros** | **42.1% Negativos**
+- Domínio mais positivo: **Good News** (66.7%)
+- Domínio mais negativo: **Commodity** (51.9%)
+- Relatório com recomendações estratégicas para equipe de marketing
+
+---
+
+*Checkpoint FIAP 2026 — NLP, Chatbots e Agentes Virtuais + RPA*
