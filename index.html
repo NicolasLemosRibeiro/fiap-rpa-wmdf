@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script>
         tailwind.config = {
@@ -75,6 +76,27 @@
 
         .star-filled { color: #f59e0b; }
         .star-empty  { color: #334155; }
+
+        /* Markdown report styling */
+        .report-content h1 { font-size: 1.5rem; font-weight: 800; color: #10b981; margin: 2rem 0 1rem; letter-spacing: -0.03em; }
+        .report-content h2 { font-size: 1.15rem; font-weight: 700; color: #0ea5e9; margin: 1.8rem 0 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(30,41,59,0.6); }
+        .report-content h3 { font-size: 1rem; font-weight: 700; color: #f59e0b; margin: 1.4rem 0 0.6rem; }
+        .report-content h4 { font-size: 0.9rem; font-weight: 700; color: #94a3b8; margin: 1.2rem 0 0.5rem; }
+        .report-content p { color: #cbd5e1; font-size: 0.8rem; line-height: 1.8; margin-bottom: 0.8rem; font-weight: 300; }
+        .report-content strong { color: #f8fafc; font-weight: 700; }
+        .report-content em { color: #10b981; font-style: italic; }
+        .report-content ul, .report-content ol { color: #cbd5e1; font-size: 0.8rem; line-height: 1.9; margin: 0.6rem 0 1rem 1.2rem; }
+        .report-content li { margin-bottom: 0.3rem; }
+        .report-content ul li { list-style-type: '▸ '; }
+        .report-content ol li { list-style-type: decimal; }
+        .report-content code { background: rgba(14,165,233,0.1); color: #0ea5e9; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.75rem; border: 1px solid rgba(14,165,233,0.2); }
+        .report-content blockquote { border-left: 3px solid #10b981; padding: 0.8rem 1rem; margin: 1rem 0; background: rgba(16,185,129,0.05); border-radius: 0 8px 8px 0; }
+        .report-content blockquote p { color: #94a3b8; margin: 0; }
+        .report-content hr { border: none; border-top: 1px solid rgba(30,41,59,0.6); margin: 1.5rem 0; }
+        .report-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.75rem; }
+        .report-content thead th { background: rgba(15,23,42,0.9); color: #94a3b8; padding: 0.6rem 0.8rem; text-align: left; font-weight: 700; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.08em; border-bottom: 1px solid rgba(30,41,59,0.8); }
+        .report-content tbody td { padding: 0.5rem 0.8rem; color: #cbd5e1; border-bottom: 1px solid rgba(30,41,59,0.3); }
+        .report-content tbody tr:hover td { background: rgba(255,255,255,0.02); }
     </style>
 </head>
 
@@ -109,8 +131,9 @@
             <div>
                 <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-tight">SENTIMENT <br /> <span class="text-intel-neon">ANALYTICS</span></h2>
                 <p class="text-slate-400 text-lg font-light leading-relaxed mb-8">
-                    Este dashboard consome o arquivo <code class="text-intel-sky">resultado_sentimentos.csv</code> gerado
-                    pelo pipeline NLP no Colab. Visualize sentimentos, domínios e confiança do modelo BERT em tempo real.
+                    Este dashboard consome os arquivos gerados pelo pipeline NLP no Colab:
+                    <code class="text-intel-sky">resultado_sentimentos.csv</code> e
+                    <code class="text-intel-sky">relatorio_analitico.md</code>.
                 </p>
                 <div class="flex gap-4">
                     <div class="flex -space-x-2">
@@ -123,15 +146,36 @@
                 </div>
             </div>
 
-            <div id="drop-zone" class="drop-zone glass p-10 rounded-3xl text-center cursor-pointer relative overflow-hidden group">
-                <input type="file" id="file-input" class="hidden" accept=".csv">
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-intel-border rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-intel-neon group-hover:text-intel-black transition-all">
-                        <i data-lucide="upload-cloud" class="w-8 h-8"></i>
+            <!-- Upload Cards -->
+            <div class="flex flex-col gap-4">
+                <!-- CSV Upload -->
+                <div id="drop-zone-csv" class="drop-zone glass p-6 rounded-2xl text-center cursor-pointer relative overflow-hidden group">
+                    <input type="file" id="file-input-csv" class="hidden" accept=".csv">
+                    <div class="relative z-10 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-intel-border rounded-xl flex items-center justify-center shrink-0 group-hover:bg-intel-neon group-hover:text-intel-black transition-all">
+                            <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="font-bold text-sm mb-0.5">resultado_sentimentos.csv</h3>
+                            <p class="text-[10px] text-slate-500" id="csv-status">Arraste ou clique para carregar</p>
+                        </div>
+                        <span id="csv-badge" class="text-[10px] px-3 py-1 bg-slate-800 text-slate-500 rounded border border-intel-border uppercase font-bold tracking-widest shrink-0">Aguardando</span>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">Upload de Resultados NLP</h3>
-                    <p class="text-xs text-slate-500 mb-6">Arraste o arquivo CSV gerado pelo notebook NLP aqui <br> ou clique para selecionar.</p>
-                    <span class="text-[10px] px-3 py-1 bg-intel-neon/10 text-intel-neon rounded border border-intel-neon/20 uppercase font-bold tracking-widest">Aguardando resultado_sentimentos.csv</span>
+                </div>
+
+                <!-- MD Upload -->
+                <div id="drop-zone-md" class="drop-zone glass p-6 rounded-2xl text-center cursor-pointer relative overflow-hidden group">
+                    <input type="file" id="file-input-md" class="hidden" accept=".md,.markdown,.txt">
+                    <div class="relative z-10 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-intel-border rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#8b5cf6] group-hover:text-white transition-all">
+                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <div class="text-left flex-1">
+                            <h3 class="font-bold text-sm mb-0.5">relatorio_analitico.md</h3>
+                            <p class="text-[10px] text-slate-500" id="md-status">Arraste ou clique para carregar</p>
+                        </div>
+                        <span id="md-badge" class="text-[10px] px-3 py-1 bg-slate-800 text-slate-500 rounded border border-intel-border uppercase font-bold tracking-widest shrink-0">Aguardando</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -162,7 +206,6 @@
 
         <!-- Analytics Section -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <!-- Sentimento Geral (Donut) -->
             <div class="glass p-8 rounded-3xl h-[400px]">
                 <div class="flex justify-between items-center mb-6">
                     <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Sentimento Geral</h4>
@@ -173,7 +216,6 @@
                 </div>
             </div>
 
-            <!-- Sentimento por Domínio (Barras) -->
             <div class="glass p-8 rounded-3xl h-[400px]">
                 <div class="flex justify-between items-center mb-6">
                     <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Sentimento por Domínio</h4>
@@ -184,7 +226,6 @@
                 </div>
             </div>
 
-            <!-- Confiança média por domínio -->
             <div class="glass p-8 rounded-3xl h-[400px]">
                 <div class="flex justify-between items-center mb-6">
                     <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Confiança Média (BERT)</h4>
@@ -193,6 +234,19 @@
                 <div class="h-full pb-10">
                     <canvas id="confidenceChart"></canvas>
                 </div>
+            </div>
+        </section>
+
+        <!-- Relatório Analítico Section -->
+        <section id="report-section" class="mb-12 hidden">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold flex items-center gap-3 italic">
+                    <i data-lucide="scroll-text" class="text-[#8b5cf6]"></i> Relatório_Analítico.md
+                </h3>
+                <span class="text-[10px] px-3 py-1 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded border border-[#8b5cf6]/20 uppercase font-bold tracking-widest">Gemini RAG</span>
+            </div>
+            <div class="glass rounded-3xl border border-intel-border shadow-2xl p-8 md:p-12">
+                <div id="report-content" class="report-content max-w-4xl mx-auto"></div>
             </div>
         </section>
 
@@ -262,17 +316,18 @@
         let globalData = [];
         let activeFilter = 'Todos';
 
-        const dropZone    = document.getElementById('drop-zone');
-        const fileInput   = document.getElementById('file-input');
-        const searchInput = document.getElementById('searchInput');
+        const dropZoneCsv  = document.getElementById('drop-zone-csv');
+        const fileInputCsv = document.getElementById('file-input-csv');
+        const dropZoneMd   = document.getElementById('drop-zone-md');
+        const fileInputMd  = document.getElementById('file-input-md');
+        const searchInput  = document.getElementById('searchInput');
 
-        // Search
+        // ── Search ──
         searchInput.addEventListener('input', (e) => {
-            const term = e.target.value.toLowerCase();
-            applyFilters(term);
+            applyFilters(e.target.value.toLowerCase());
         });
 
-        // Filter buttons
+        // ── Filter Buttons ──
         function filterBySentiment(s) {
             activeFilter = s;
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('bg-intel-border'));
@@ -292,18 +347,18 @@
             renderTable(filtered);
         }
 
-        // Drag & Drop
-        dropZone.addEventListener('click', () => fileInput.click());
-        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('active'); });
-        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('active'));
-        dropZone.addEventListener('drop', (e) => {
+        // ── CSV Drag & Drop ──
+        dropZoneCsv.addEventListener('click', () => fileInputCsv.click());
+        dropZoneCsv.addEventListener('dragover', (e) => { e.preventDefault(); dropZoneCsv.classList.add('active'); });
+        dropZoneCsv.addEventListener('dragleave', () => dropZoneCsv.classList.remove('active'));
+        dropZoneCsv.addEventListener('drop', (e) => {
             e.preventDefault();
-            dropZone.classList.remove('active');
-            handleFile(e.dataTransfer.files[0]);
+            dropZoneCsv.classList.remove('active');
+            handleCsvFile(e.dataTransfer.files[0]);
         });
-        fileInput.addEventListener('change', (e) => handleFile(e.target.files[0]));
+        fileInputCsv.addEventListener('change', (e) => handleCsvFile(e.target.files[0]));
 
-        function handleFile(file) {
+        function handleCsvFile(file) {
             if (!file) return;
             Papa.parse(file, {
                 header: true,
@@ -312,12 +367,49 @@
             });
         }
 
-        // Auto-load
+        // ── MD Drag & Drop ──
+        dropZoneMd.addEventListener('click', () => fileInputMd.click());
+        dropZoneMd.addEventListener('dragover', (e) => { e.preventDefault(); dropZoneMd.classList.add('active'); });
+        dropZoneMd.addEventListener('dragleave', () => dropZoneMd.classList.remove('active'));
+        dropZoneMd.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZoneMd.classList.remove('active');
+            handleMdFile(e.dataTransfer.files[0]);
+        });
+        fileInputMd.addEventListener('change', (e) => handleMdFile(e.target.files[0]));
+
+        function handleMdFile(file) {
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (evt) => renderReport(evt.target.result);
+            reader.readAsText(file);
+        }
+
+        function renderReport(mdText) {
+            const section = document.getElementById('report-section');
+            const container = document.getElementById('report-content');
+            container.innerHTML = marked.parse(mdText);
+            section.classList.remove('hidden');
+
+            document.getElementById('md-status').textContent = 'Relatório carregado';
+            const badge = document.getElementById('md-badge');
+            badge.textContent = 'Ativo';
+            badge.className = 'text-[10px] px-3 py-1 bg-[#8b5cf6]/15 text-[#8b5cf6] rounded border border-[#8b5cf6]/30 uppercase font-bold tracking-widest shrink-0';
+        }
+
+        // ── Auto-load CSV ──
         fetch('resultado_sentimentos.csv')
             .then(r => { if (r.ok) return r.text(); throw new Error(); })
             .then(csv => Papa.parse(csv, { header: true, skipEmptyLines: true, complete: (r) => processData(r.data) }))
-            .catch(() => console.log('Aguardando upload manual...'));
+            .catch(() => console.log('CSV: aguardando upload manual...'));
 
+        // ── Auto-load MD ──
+        fetch('relatorio_analitico.md')
+            .then(r => { if (r.ok) return r.text(); throw new Error(); })
+            .then(md => renderReport(md))
+            .catch(() => console.log('MD: aguardando upload manual...'));
+
+        // ── Process CSV Data ──
         function processData(data) {
             globalData = data;
 
@@ -328,7 +420,6 @@
             document.getElementById('status-tag').classList.remove('hidden');
             document.getElementById('stats-grid').classList.remove('opacity-50');
 
-            // Stats
             const pos = data.filter(r => r.Sentimento === 'Positivo').length;
             const neu = data.filter(r => r.Sentimento === 'Neutro').length;
             const neg = data.filter(r => r.Sentimento === 'Negativo').length;
@@ -340,20 +431,11 @@
             document.getElementById('stat-neg').innerText    = neg;
             document.getElementById('stat-domains').innerText = domains.length;
 
-            // Update drop zone
-            dropZone.innerHTML = `
-                <div class="relative z-10">
-                    <div class="w-16 h-16 bg-intel-neon/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="check-circle" class="w-8 h-8 text-intel-neon"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-1 text-intel-neon">Dados Carregados!</h3>
-                    <p class="text-xs text-slate-400">${data.length} registros • ${domains.length} domínios</p>
-                    <p class="text-[10px] text-slate-500 mt-2">Clique para carregar outro arquivo</p>
-                    <input type="file" id="file-input-new" class="hidden" accept=".csv">
-                </div>`;
-            dropZone.addEventListener('click', () => document.getElementById('file-input-new')?.click());
-            document.getElementById('file-input-new')?.addEventListener('change', (e) => handleFile(e.target.files[0]));
-            lucide.createIcons();
+            // Update CSV upload badge
+            document.getElementById('csv-status').textContent = `${data.length} registros \u2022 ${domains.length} dom\u00ednios`;
+            const csvBadge = document.getElementById('csv-badge');
+            csvBadge.textContent = 'Ativo';
+            csvBadge.className = 'text-[10px] px-3 py-1 bg-intel-neon/15 text-intel-neon rounded border border-intel-neon/30 uppercase font-bold tracking-widest shrink-0';
 
             renderTable(data);
             buildSentimentChart(pos, neu, neg);
@@ -361,6 +443,7 @@
             buildConfidenceChart(data, domains);
         }
 
+        // ── Render Table ──
         function renderTable(dataset) {
             const tbody = document.getElementById('data-table-body');
             document.getElementById('feed-count').innerText = `${dataset.length} registros`;
@@ -371,12 +454,8 @@
                 return;
             }
 
-            const sentClasses = {
-                'Positivo': 'badge-pos',
-                'Neutro':   'badge-neu',
-                'Negativo': 'badge-neg'
-            };
-            const sentEmoji = { 'Positivo': '▲', 'Neutro': '●', 'Negativo': '▼' };
+            const sentClasses = { 'Positivo': 'badge-pos', 'Neutro': 'badge-neu', 'Negativo': 'badge-neg' };
+            const sentEmoji   = { 'Positivo': '\u25B2', 'Neutro': '\u25CF', 'Negativo': '\u25BC' };
 
             const fragment = document.createDocumentFragment();
             dataset.forEach(row => {
@@ -393,10 +472,9 @@
                 const cls      = sentClasses[sentimento] || '';
                 const emoji    = sentEmoji[sentimento] || '?';
 
-                // Stars rendering
                 let starsHtml = '';
                 for (let i = 1; i <= 5; i++) {
-                    starsHtml += `<span class="${i <= estrelas ? 'star-filled' : 'star-empty'}">★</span>`;
+                    starsHtml += `<span class="${i <= estrelas ? 'star-filled' : 'star-empty'}">\u2605</span>`;
                 }
 
                 tr.innerHTML = `
@@ -417,6 +495,7 @@
             tbody.appendChild(fragment);
         }
 
+        // ── Charts ──
         function buildSentimentChart(pos, neu, neg) {
             const ctx = document.getElementById('sentimentChart').getContext('2d');
             if (sentimentChart) sentimentChart.destroy();
@@ -438,12 +517,7 @@
                     plugins: {
                         legend: {
                             position: 'bottom',
-                            labels: {
-                                color: '#94a3b8',
-                                font: { family: 'JetBrains Mono', size: 10 },
-                                padding: 16,
-                                usePointStyle: true
-                            }
+                            labels: { color: '#94a3b8', font: { family: 'JetBrains Mono', size: 10 }, padding: 16, usePointStyle: true }
                         },
                         tooltip: {
                             callbacks: {
@@ -511,7 +585,7 @@
                 data: {
                     labels: domains,
                     datasets: [{
-                        label: 'Confiança Média (%)',
+                        label: 'Confian\u00e7a M\u00e9dia (%)',
                         data: avgConf,
                         backgroundColor: colors.slice(0, domains.length),
                         borderRadius: 6,
